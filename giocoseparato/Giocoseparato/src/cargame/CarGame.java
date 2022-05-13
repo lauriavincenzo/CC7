@@ -1,0 +1,394 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package cargame;
+
+/**
+ *
+ * @author vlaur
+ */
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import static java.lang.Thread.sleep;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.Timer;
+
+public class CarGame extends JFrame implements KeyListener, ActionListener {
+
+    private int xpos = 300;
+    private int ypos = 700;
+    private ImageIcon car;
+    private long timer;
+    long tinizio;
+    long tfine;
+    private int num1 = 400, num2 = 0, num3 = 0;
+    private int roadmove = 0;
+    private int carxpos[] = {100, 200, 300, 400, 500};
+    private int carypos[] = {-240, -480, -720, -960, -1200};
+    private int cxpos1 = 0, cxpos2 = 2, cxpos3 = 4;
+    private int cypos1 = util.RandomRange(0, 4), cypos2 = util.RandomRange(0, 4), cypos3 = util.RandomRange(0, 4);
+    int y1pos = carypos[cypos1], y2pos = carypos[cypos2], y3pos = carypos[cypos3];
+    private ImageIcon car1, car2, car3;
+    private int score = 0, delay = 100, speed = 50;
+    private ImageIcon tree1, tree2, tree3;
+    private boolean rightrotate = false, gameover = false, paint = false;
+    Alberi a, a1, a2;
+    condivisa c;
+
+    public CarGame(String title) {
+        super(title);
+        setBounds(300, 10, 700, 700);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+        addKeyListener(this);
+        setFocusable(true);
+        setResizable(false);
+
+        tinizio = new Date().getTime();
+        c = new condivisa();
+
+    }
+
+    public void paint(Graphics g) {
+        g.setColor(Color.gray);
+        g.fillRect(0, 0, 700, 700);
+        g.setColor(Color.white);
+        g.fillRect(90, 0, 10, 700);
+        g.fillRect(600, 0, 10, 700);
+        g.setColor(Color.black);
+        g.fillRect(100, 0, 500, 700);
+
+        if (roadmove == 0) {
+            for (int i = 0; i <= 700; i += 100) {
+                g.setColor(Color.white);
+                g.fillRect(350, i, 10, 70);
+                //350 è la posizione della linea tratt nello schermo
+                //70 è la grandezza di ogni trattino, aumentando il dato diventa una riga continua
+
+            }
+            roadmove = 1;
+        } else if (roadmove == 1) {
+            for (int i = 50; i <= 700; i += 100) {
+                g.setColor(Color.white);
+                g.fillRect(350, i, 10, 70);
+            }
+            roadmove = 0;
+        }
+        ///for  road
+        //GRAFICA ALBERI
+
+        c.riposizionamentoAlberi();
+        tree1 = new ImageIcon("./assets/tree1.png");
+        tree1.paintIcon(this, g, 0, c.getTree1ypos());
+        num1 = util.RandomRange(0, 499);
+        tree2 = new ImageIcon("./assets/tree2.png");
+        tree2.paintIcon(this, g, 0, c.getTree2ypos());
+        tree3 = new ImageIcon("./assets/tree3.png");
+        tree3.paintIcon(this, g, 0, c.getTree3ypos());
+        tree1.paintIcon(this, g, 600, c.getTree4ypos());
+        tree3.paintIcon(this, g, 600, c.getTree5ypos());
+        tree2.paintIcon(this, g, 600, c.getTree6ypos());
+        c.incrementopos();
+
+        //CREAZIONE AUTO PROTAGONISTA
+        car = new ImageIcon("./assets/gamecar1.png");
+
+        car.paintIcon(this, g, xpos, ypos);
+        ypos -= 40;
+        if (ypos < 500) {
+            ypos = 500;
+        }
+
+        // GESTIONE OSTACOLI FISSI DA 158 A 276
+        car1 = new ImageIcon("./assets/gamecar2.png");
+        car2 = new ImageIcon("./assets/gamecar3.png");
+        //car3=new ImageIcon("./assets/gamecar4.png");
+
+        car1.paintIcon(this, g, carxpos[cxpos1], y1pos);
+        car2.paintIcon(this, g, carxpos[cxpos2], y2pos);
+        //car3.paintIcon(this, g, carxpos[cxpos3], y3pos);
+        y1pos += 50;
+        y2pos += 50;
+        //y3pos+=50;
+        if (y1pos > 700) {
+            //capire perchè era commentato da 172 a 176
+            cxpos1++;
+            if (cxpos1 > 4) {
+                cxpos1 = 0;
+            }
+            cxpos1 = util.RandomRange(0, 4);
+            cypos1 = util.RandomRange(0, 4);
+            y1pos = carypos[cypos1];
+
+        }
+        if (y2pos > 700) {
+            cxpos2++;
+            if (cxpos2 > 4) {
+                cxpos2 = 0;
+            }
+
+            cxpos2 = util.RandomRange(0, 4);
+            cypos2 = util.RandomRange(0, 4);
+            y2pos = carypos[cypos2];
+
+        }
+        //if(y3pos>700)
+        //{
+        //	cxpos3++;
+        //      if(cxpos3>4)
+        //	{
+        //	  cxpos3=0;
+        //	}
+        //	cxpos3=random.nextInt(5);
+        //	cypos3=random.nextInt(5);
+        //	y3pos=carypos[cypos3];
+        //}
+
+        if (cxpos1 == cxpos2 && cypos1 > -100 && cypos2 > -100) {
+
+            cxpos1 -= 1;
+            if (cxpos1 < 0) {
+                cxpos1 += 2;
+            }
+        }
+        if (cxpos1 == cxpos3 && cypos1 > -100 && cypos3 > -100) {
+            cxpos3 -= 1;
+            if (cxpos3 < 0) {
+                cxpos3 += 2;
+            }
+        }
+        if (cxpos2 == cxpos3 && cypos3 > -100 && cypos2 > -100) {
+            cxpos2 -= 1;
+            if (cxpos2 < 0) {
+                cxpos2 += 2;
+            }
+        }
+        if (cxpos1 < 2 && cxpos2 < 2 && cxpos3 < 2) {
+            if (cxpos1 == 0 && cxpos2 == 0 && cxpos3 == 1) {
+                cxpos3++;
+                cxpos2++;
+            } else if (cxpos1 == 0 && cxpos2 == 1 && cxpos3 == 0) {
+                cxpos3++;
+                cxpos2++;
+            } else if (cxpos1 == 1 && cxpos2 == 0 && cxpos3 == 0) {
+                cxpos1++;
+                cxpos2++;
+            }
+        }
+        //GAMEOVER
+        if (y1pos < ypos && y1pos + 175 > ypos && carxpos[cxpos1] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        if (y2pos < ypos && y2pos + 175 > ypos && carxpos[cxpos2] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        if (y3pos < ypos && y3pos + 175 > ypos && carxpos[cxpos3] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        if (ypos < y1pos && ypos + 175 > y1pos && carxpos[cxpos1] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        if (ypos < y2pos && ypos + 175 > y2pos && carxpos[cxpos2] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        if (ypos < y3pos && ypos + 175 > y3pos && carxpos[cxpos3] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        //PUNTEGGIO KM/H E TIMER
+        g.setColor(Color.blue);
+        g.fillRect(120, 35, 220, 50);
+        g.setColor(Color.DARK_GRAY);
+        g.fillRect(125, 40, 210, 40);
+
+        g.setColor(Color.blue);
+        g.fillRect(415, 35, 180, 50);
+        g.setColor(Color.DARK_GRAY);
+        g.fillRect(420, 40, 170, 40);
+
+        g.setColor(Color.white);
+        g.setFont(new Font("Arial", Font.BOLD, 30));
+        g.drawString("Score : " + score, 160, 70);
+        g.drawString(speed + " Km/h", 453, 70);
+        score++;
+        speed++;
+
+        if (speed > 130) {
+            speed = 130;
+
+        }
+        //PUNTO CRITICO, IL DELAY ERA A 60, 500 è PER MOSTRARE BENE IL SUO EFFETTO
+        if (score % 50 == 0) {
+            delay -= 10;
+            if (delay < 150) {
+                delay = 150;
+            }
+        }
+        //delay 
+        try {
+
+            TimeUnit.MILLISECONDS.sleep(delay);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        if (y1pos < ypos && y1pos + 175 > ypos && carxpos[cxpos1] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        if (y2pos < ypos && y2pos + 175 > ypos && carxpos[cxpos2] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        if (y3pos < ypos && y3pos + 175 > ypos && carxpos[cxpos3] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        //SCHERMATA DI GAME OVER
+        if (gameover) {
+            g.setColor(Color.gray);
+            g.fillRect(120, 210, 460, 200);
+            g.setColor(Color.DARK_GRAY);
+            g.fillRect(130, 220, 440, 180);
+            g.setFont(new Font("Serif", Font.BOLD, 50));
+            g.setColor(Color.yellow);
+            g.drawString("Game Over !", 210, 270);
+            g.setColor(Color.white);
+            g.setFont(new Font("Arial", Font.BOLD, 30));
+
+            timer=timer/1000;
+            g.drawString("Tempo di gioco: "+timer, 210, 330);
+            g.setFont(new Font("Arial",Font.BOLD,20));
+            g.drawString("secondi", 470, 330);
+            g.drawString("Press Enter to Restart", 250, 380);
+
+            if (!paint) {
+                repaint();
+                paint = true;
+            }
+        } else {
+            repaint();
+        }
+    }
+
+    public static void main(String args[]) {
+        CarGame c = new CarGame("Car Game");
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        // TODO Auto-generated method stub
+        if (e.getKeyCode() == KeyEvent.VK_LEFT && !gameover) {
+            xpos -= 100;
+            if (xpos < 100) {
+                xpos = 100;
+            }
+
+        }
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT && !gameover) {
+            xpos += 100;
+            if (xpos > 500) {
+                xpos = 500;
+            }
+        }
+        if (e.getKeyCode() == KeyEvent.VK_ENTER && gameover) {
+            gameover = false;
+            paint = false;
+            cxpos1 = 0;
+            cxpos2 = 2;
+            cxpos3 = 4;
+            cypos1 = util.RandomRange(0, 4);
+            cypos2 = util.RandomRange(0, 4);
+            cypos3 = util.RandomRange(0, 4);
+            y1pos = carypos[cypos1];
+            y2pos = carypos[cypos2];
+            y3pos = carypos[cypos3];
+            speed = 50;
+            score = 0;
+            tfine = new Date().getTime();
+            tinizio=new Date().getTime();
+
+            delay = 100;
+            xpos = 300;
+            ypos = 700;
+
+        }
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent arg0) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        // TODO Auto-generated method stub
+        if (e.getKeyChar() == 'a' && !gameover) {
+            xpos -= 100;
+
+        }
+        if (e.getKeyChar() == 'd' && !gameover) {
+            xpos += 100;
+        }
+        if (e.getKeyChar() == 'w' && !gameover) {
+            if(delay>80){
+             delay-=5;
+            }
+             if(speed<100)
+             {
+                 speed+=5;
+             }
+            
+        }
+        if (e.getKeyChar() == 's' && !gameover) {
+            
+            if(delay<185){
+             delay+=5;
+            }
+            if(speed<50)
+             {
+                 speed+=5;
+             }
+        }
+
+        repaint();
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent arg0) {
+        // TODO Auto-generated method stub
+
+    }
+}
