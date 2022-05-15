@@ -131,8 +131,8 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
         g.setFont(new Font("Arial", Font.BOLD, 30));
         g.drawString("Score : " + c.getScore(), 160, 70);
         g.drawString(c.getSpeed() + " Km/h", 453, 70);
-        c.incrementoscore();
-        c.incrementospeed();
+        //c.incrementoscore();
+        //c.incrementospeed();
         c.gestionescore();
         c.gestionevelocita();
        
@@ -199,7 +199,7 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
             c.setScore(0);
             c.setSpeed(50);
             
-            c.setDelay(120);
+            c.setDelay(150);
             c.setXpos(300);
             c.setYpos(700);
 
@@ -217,26 +217,31 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
     public void keyTyped(KeyEvent e) {
         // TODO Auto-generated method stub
         if (e.getKeyChar() == 'a' && !c.isGameover()) {
+            if(c.getXpos()!=100){
+                c.setXpos(c.getXpos()-100);
+            }
             
-            c.setXpos(c.getXpos()-100);
 
         }
         if (e.getKeyChar() == 'd' && !c.isGameover()) {
-            
-            c.setXpos(c.getXpos()+100);
+            if(c.getXpos()!=500){
+                c.setXpos(c.getXpos()+100);
+            }
         }
         if (e.getKeyChar() == 'w' && !c.isGameover()) {
-             if(c.getSpeed()<100)
+             if(c.getSpeed()<130)
              {
                  c.setSpeed(c.getSpeed()+5);
+                 c.setDelay(c.getDelay()-5);
              }
+             
             
         }
         if (e.getKeyChar() == 's' && !c.isGameover()) {
-            if(c.getSpeed()<50)
+            if(c.getSpeed()>50)
              {
-                 c.setSpeed(c.getSpeed()-5);
-                 
+                c.setSpeed(c.getSpeed()-5);
+                c.setDelay(c.getDelay()+5);
              }
         }
 

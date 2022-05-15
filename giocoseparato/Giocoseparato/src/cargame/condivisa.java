@@ -27,8 +27,9 @@ public class condivisa {
     private long timer;
     private long tinizio, tfine;
     private boolean gameover = false;
-    private int delay = 100;
-    int speed, score;
+    private int delay;
+    int speed;
+    float score;
 
     public condivisa() {
         vett = new int[]{400, -200, -500, 100, -300, 500};
@@ -50,6 +51,7 @@ public class condivisa {
         tinizio = new Date().getTime();
         speed = 50;
         score = 0;
+        delay=100;
 
     }
 
@@ -194,7 +196,7 @@ public class condivisa {
         return gameover;
     }
 
-    public int getScore() {
+    public float getScore() {
         return score;
     }
 
@@ -443,19 +445,22 @@ public class condivisa {
         this.delay = delay;
     }
 
-    public void gestionevelocita() {
+     public void gestionevelocita(){
         if (speed > 130) {
-            speed = 130;
+            speed=130;
         }
     }
-
-    public void gestionescore() {
-        if (score % 50 == 0) {
-            score -= 10;
-            if (delay < 100) {
-                delay = 100;
-            }
+    public void gestionescore(){
+        if((speed>49)&&(speed<70)){
+            score+=0.5;
+        }else if((speed>69)&&(speed<90)){
+            score++;
+        }else if((speed>89)&&(speed<110)){
+            score++;
+            score+=0.5;
+        }else if((speed>109)&&(speed<131)){
+            score++;
+            score++;
         }
     }
-
 }
