@@ -108,8 +108,10 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
         // GESTIONE OSTACOLI FISSI DA 158 A 276
         car1 = new ImageIcon("./assets/gamecar2.png");
         car2 = new ImageIcon("./assets/gamecar3.png");
+        car3 = new ImageIcon("./assets/gamecar4.png");
         car1.paintIcon(this, g, c.getCarxpos()[c.getCxpos1()], c.getY1pos());
         car2.paintIcon(this, g, c.getCarxpos()[c.getCxpos2()], c.getY2pos());
+        car3.paintIcon(this, g, c.getCarxpos()[c.getCxpos3()], c.getY3pos());
         c.gestioneostacolifissi();
         
         //GAMEOVER
