@@ -28,6 +28,7 @@ public class condivisa {
     private long tinizio,tfine;
     private boolean gameover=false;
     private int delay=100;
+    int speed,score;
 
     public condivisa() {
         vett = new int[]{400, -200, -500, 100, -300, 500};
@@ -39,14 +40,14 @@ public class condivisa {
         carypos=new int[]{-240,-480,-720,-960,-1200};
         cxpos1=0;
         cxpos2=2;
-        cxpos3=4;
         cypos1=util.RandomRange(0, 4);
         cypos2=util.RandomRange(0, 4);
-        cypos3=util.RandomRange(0, 4);
         y1pos = carypos[cypos1];
         y2pos = carypos[cypos2];
-        y3pos = carypos[cypos3];
         tinizio = new Date().getTime();
+        speed=50;
+        score=0;
+        
     }
 
     public int getTree1ypos() {
@@ -158,9 +159,46 @@ public class condivisa {
         return y2pos;
     }
 
-    public int getY3pos() {
-        return y3pos;
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
+
+    public void setTimer(long timer) {
+        this.timer = timer;
+    }
+    
+    public long getTimer() {
+        return timer;
+    }
+
+    public int getDelay() {
+        return delay;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public boolean isGameover() {
+        return gameover;
+    }
+
+    public int getScore() {
+        return score;
+    }
+    public void incrementoscore()
+    {
+        score++;
+    }
+    public void incrementospeed()
+    {
+        speed++;
+    }
+    
 
     public int getXpos() {
         return xpos;
@@ -186,9 +224,7 @@ public class condivisa {
         return cxpos2;
     }
 
-    public int getCxpos3() {
-        return cxpos3;
-    }
+    
 
     public int getCypos1() {
         return cypos1;
@@ -198,9 +234,7 @@ public class condivisa {
         return cypos2;
     }
 
-    public int getCypos3() {
-        return cypos3;
-    }
+   
     
     public void decrementoy(){
         ypos-=40;
@@ -216,7 +250,6 @@ public class condivisa {
         y1pos += 50;
         y2pos += 50;
         if (y1pos > 700) {
-            //capire perchè era commentato da 172 a 176
             cxpos1++;
             if (cxpos1 > 4) {
                 cxpos1 = 0;
@@ -241,29 +274,25 @@ public class condivisa {
 
             cxpos1 -= 1;
             if (cxpos1 < 0) {
-                cxpos1 += 2;
+                cxpos1 += 5;
             }
         }
-        if (cxpos1 == cxpos3 && cypos1 > -100 && cypos3 > -100) {
-            cxpos3 -= 1;
-            if (cxpos3 < 0) {
-                cxpos3 += 2;
-            }
+        if (cxpos1 == cxpos3 && cypos1 > -100 ) {
         }
-        if (cxpos2 == cxpos3 && cypos3 > -100 && cypos2 > -100) {
+        if (cxpos2 == cxpos3  && cypos2 > -100) {
             cxpos2 -= 1;
             if (cxpos2 < 0) {
-                cxpos2 += 2;
+                cxpos2 += 5;
             }
         }
-        if (cxpos1 < 2 && cxpos2 < 2 && cxpos3 < 2) {
-            if (cxpos1 == 0 && cxpos2 == 0 && cxpos3 == 1) {
-                cxpos3++;
+        if (cxpos1 < 2 && cxpos2 < 2 ) {
+            if (cxpos1 == 0 && cxpos2 == 0 ) {
+                
                 cxpos2++;
-            } else if (cxpos1 == 0 && cxpos2 == 1 && cxpos3 == 0) {
-                cxpos3++;
+            } else if (cxpos1 == 0 && cxpos2 == 1 ) {
+                
                 cxpos2++;
-            } else if (cxpos1 == 1 && cxpos2 == 0 && cxpos3 == 0) {
+            } else if (cxpos1 == 1 && cxpos2 == 0 ) {
                 cxpos1++;
                 cxpos2++;
             }
@@ -281,11 +310,7 @@ public class condivisa {
             tfine = new Date().getTime();
             timer = tfine - tinizio;
         }
-        if (y3pos < ypos && y3pos + 175 > ypos && carxpos[cxpos3] == xpos) {
-            gameover = true;
-            tfine = new Date().getTime();
-            timer = tfine - tinizio;
-        }
+        
         if (ypos < y1pos && ypos + 175 > y1pos && carxpos[cxpos1] == xpos) {
             gameover = true;
             tfine = new Date().getTime();
@@ -296,11 +321,7 @@ public class condivisa {
             tfine = new Date().getTime();
             timer = tfine - tinizio;
         }
-        if (ypos < y3pos && ypos + 175 > y3pos && carxpos[cxpos3] == xpos) {
-            gameover = true;
-            tfine = new Date().getTime();
-            timer = tfine - tinizio;
-        }
+        
     }
     
     public void gestionedelay()
@@ -322,11 +343,7 @@ public class condivisa {
             tfine = new Date().getTime();
             timer = tfine - tinizio;
         }
-        if (y3pos < ypos && y3pos + 175 > ypos && carxpos[cxpos3] == xpos) {
-            gameover = true;
-            tfine = new Date().getTime();
-            timer = tfine - tinizio;
-        }
+        
     }
 
     public void setXpos(int xpos) {
@@ -345,9 +362,7 @@ public class condivisa {
         this.cxpos2 = cxpos2;
     }
 
-    public void setCxpos3(int cxpos3) {
-        this.cxpos3 = cxpos3;
-    }
+    
 
     public void setCypos1(int cypos1) {
         this.cypos1 = cypos1;
@@ -357,9 +372,7 @@ public class condivisa {
         this.cypos2 = cypos2;
     }
 
-    public void setCypos3(int cypos3) {
-        this.cypos3 = cypos3;
-    }
+    
 
     public void setY1pos(int y1pos) {
         this.y1pos = y1pos;
@@ -369,9 +382,7 @@ public class condivisa {
         this.y2pos = y2pos;
     }
 
-    public void setY3pos(int y3pos) {
-        this.y3pos = y3pos;
-    }
+    
 
     public void setTinizio(long tinizio) {
         this.tinizio = tinizio;
@@ -387,6 +398,19 @@ public class condivisa {
 
     public void setDelay(int delay) {
         this.delay = delay;
+    }
+    public void gestionevelocita(){
+        if (speed > 130) {
+            speed=130;
+        }
+    }
+    public void gestionescore(){
+        if (score % 50 == 0) {
+            score-=10;
+            if (delay < 100) {
+                delay=100;
+            }
+        }
     }
     
 }
