@@ -24,8 +24,11 @@ public class Alberi extends Thread {
 
     @Override
     public void run() {
-        while(c.riposizionamentoAlberi()>=0){
-            int time = util.RandomRange(500,1000);
+        while(true){
+            int time = util.RandomRange(200,500);
+            //System.out.println("incremento");
+//            c.incrementopos();
+            c.riposizionamentoAlberi();
             try {
                 sleep(time);
             } catch (InterruptedException ex) {

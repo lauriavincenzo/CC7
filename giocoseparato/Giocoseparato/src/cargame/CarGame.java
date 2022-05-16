@@ -36,7 +36,7 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
     private ImageIcon car1, car2, car3;
     private ImageIcon tree1, tree2, tree3;
     private boolean rightrotate = false, paint = false;
-    Alberi a1,a2,a3;
+    Alberi a1,a2,a3,a4,a5,a6;
     condivisa c;
     Thread_Ostacolifissi o,o2;
     public CarGame(String title) {
@@ -52,9 +52,13 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
         a1=new Alberi(this,c);
         a2=new Alberi(this,c);
         a3=new Alberi(this,c);
+        a4=new Alberi(this,c);
+        a5=new Alberi(this,c);
+        a6=new Alberi(this,c);
         a1.start();
         a2.start();
         a3.start();
+        
         
 
     }
@@ -87,12 +91,12 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
         
         //GRAFICA ALBERI
         
-        tree1 = new ImageIcon("./assets/tree1.png");
-        tree1.paintIcon(this, g, 0, c.getTree1ypos());
         num1 = util.RandomRange(0, 499);
+        tree1 = new ImageIcon("./assets/tree1.png");
         tree2 = new ImageIcon("./assets/tree2.png");
-        tree2.paintIcon(this, g, 0, c.getTree2ypos());
         tree3 = new ImageIcon("./assets/tree3.png");
+        tree1.paintIcon(this, g, 0, c.getTree1ypos());
+        tree2.paintIcon(this, g, 0, c.getTree2ypos());
         tree3.paintIcon(this, g, 0, c.getTree3ypos());
         tree1.paintIcon(this, g, 600, c.getTree4ypos());
         tree3.paintIcon(this, g, 600, c.getTree5ypos());
@@ -190,15 +194,17 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
             paint = false;
             c.setCxpos1(0);
             c.setCxpos2(2);
+            c.setCxpos3(4);
             c.setCypos1(util.RandomRange(0, 4));
             c.setCypos2(util.RandomRange(0, 4));
+            c.setCypos3(util.RandomRange(0, 4));
             c.setY1pos(c.getCarypos()[c.getCypos1()]);
             c.setY2pos(c.getCarypos()[c.getCypos2()]);
+            c.setY3pos(c.getCarypos()[c.getCypos3()]);
             c.setTinizio(new Date().getTime());
             c.setTfine(new Date().getTime());
             c.setScore(0);
             c.setSpeed(50);
-            
             c.setDelay(150);
             c.setXpos(300);
             c.setYpos(700);
@@ -216,19 +222,19 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
     @Override
     public void keyTyped(KeyEvent e) {
         // TODO Auto-generated method stub
-        if (e.getKeyChar() == 'a' && !c.isGameover()) {
+        if ((e.getKeyChar() == 'a'||e.getKeyChar() == 'A') && !c.isGameover()) {
             if(c.getXpos()!=100){
                 c.setXpos(c.getXpos()-100);
             }
             
 
         }
-        if (e.getKeyChar() == 'd' && !c.isGameover()) {
+       if ((e.getKeyChar() == 'd'||e.getKeyChar() == 'D') && !c.isGameover()) {
             if(c.getXpos()!=500){
                 c.setXpos(c.getXpos()+100);
             }
         }
-        if (e.getKeyChar() == 'w' && !c.isGameover()) {
+        if ((e.getKeyChar() == 'w'||e.getKeyChar() == 'W') && !c.isGameover()) {
              if(c.getSpeed()<130)
              {
                  c.setSpeed(c.getSpeed()+5);
@@ -237,7 +243,7 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
              
             
         }
-        if (e.getKeyChar() == 's' && !c.isGameover()) {
+        if ((e.getKeyChar() == 's'||e.getKeyChar() == 'S') && !c.isGameover()) {
             if(c.getSpeed()>50)
              {
                 c.setSpeed(c.getSpeed()-5);

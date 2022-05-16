@@ -108,32 +108,32 @@ public class condivisa {
         if (vett[0] > 700) {
             num1 = util.RandomRange(0, 499);
             vett[0] = -num1;
-            return vett[0];
+//            return vett[0];
         }
         if (vett[1] > 700) {
             num1 = util.RandomRange(0, 499);
             vett[1] = -num1;
-            return vett[1];
+//            return vett[1];
         }
         if (vett[2] > 700) {
             num1 = util.RandomRange(0, 499);
             vett[2] = -num1;
-            return vett[2];
+//            return vett[2];
         }
         if (vett[3] > 700) {
             num1 = util.RandomRange(0, 499);
             vett[3] = -num1;
-            return vett[3];
+//            return vett[3];
         }
         if (vett[4] > 700) {
             num1 = util.RandomRange(0, 499);
             vett[4] = -num1;
-            return vett[4];
+//            return vett[4];
         }
         if (vett[5] > 700) {
             num1 = util.RandomRange(0, 499);
             vett[5] = -num1;
-            return vett[5];
+//            return vett[5];
         }
         return -1;
     }
