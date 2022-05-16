@@ -20,12 +20,20 @@ public class Thread_Ostacolifissi extends Thread{
 
     @Override
     public void run() {
-        c.gestioneostacolifissi();
-        try {
-            sleep(util.RandomRange(500, 1000));
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Thread_Ostacolifissi.class.getName()).log(Level.SEVERE, null, ex);
+        synchronized (this) {
+        while(true){
+            int time = util.RandomRange(400,800);
+            System.out.println("ostacolofisso");
+//            c.incrementopos();
+            c.gestioneostacolifissi();
+            try {
+                sleep(time);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Alberi.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }     
         }
+       
     }
     
 }

@@ -24,9 +24,10 @@ public class Alberi extends Thread {
 
     @Override
     public void run() {
+        synchronized (this) {
         while(true){
             int time = util.RandomRange(200,500);
-            //System.out.println("incremento");
+//            System.out.println("incremento");
 //            c.incrementopos();
             c.riposizionamentoAlberi();
             try {
@@ -35,6 +36,7 @@ public class Alberi extends Thread {
                 Logger.getLogger(Alberi.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+    }
     }
      
       

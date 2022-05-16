@@ -21,9 +21,9 @@ public class condivisa {
     private int ypos;
     private int carxpos[];
     private int carypos[];
-    private int cxpos1, cxpos2, cxpos3;
-    private int cypos1, cypos2, cypos3;
-    private int y1pos, y2pos, y3pos;
+    private int cxpos1, cxpos2, cxpos3, cxpos4, cxpos5;
+    private int cypos1, cypos2, cypos3, cypos4, cypos5;
+    private int y1pos, y2pos, y3pos, y4pos, y5pos ;
     private long timer;
     private long tinizio, tfine;
     private boolean gameover = false;
@@ -38,18 +38,24 @@ public class condivisa {
         ypos = 700;
         xpos = 300;
         carxpos = new int[]{100, 200, 300, 400, 500};
-        carypos = new int[]{-240, -480, -720, -960, -1200};
+        carypos = new int[]{-180, -360, -480, -660, -840};
         cxpos1 = 0;
         cxpos2 = 2;
         cxpos3 = 4;
+        cxpos4 = 1;
+        cxpos5 = 3;
         cypos1 = util.RandomRange(0, 4);
         cypos2 = util.RandomRange(0, 4);
         cypos3 = util.RandomRange(0, 4);
+        cypos4 = util.RandomRange(0, 4);
+        cypos5 = util.RandomRange(0, 4);
         y1pos = carypos[cypos1];
         y2pos = carypos[cypos2];
         y3pos = carypos[cypos3];
+        y4pos = carypos[cypos4];
+        y5pos = carypos[cypos5];
         tinizio = new Date().getTime();
-        speed = 50;
+        speed = 70;
         score = 0;
         delay=100;
 
@@ -167,6 +173,14 @@ public class condivisa {
     public int getY3pos() {
         return y3pos;
     }
+    
+    public int getY4pos() {
+        return y4pos;
+    }
+    
+    public int getY5pos() {
+        return y5pos;
+    }
 
     public void setSpeed(int speed) {
         this.speed = speed;
@@ -235,6 +249,14 @@ public class condivisa {
     public int getCxpos3() {
         return cxpos3;
     }
+    
+    public int getCxpos4() {
+        return cxpos4;
+    }
+    
+    public int getCxpos5() {
+        return cxpos5;
+    }
 
     public int getCypos1() {
         return cypos1;
@@ -246,6 +268,14 @@ public class condivisa {
 
     public int getCypos3() {
         return cypos3;
+    }
+    
+    public int getCypos4() {
+        return cypos4;
+    }
+    
+    public int getCypos5() {
+        return cypos5;
     }
 
     public void decrementoy() {
@@ -326,8 +356,51 @@ public class condivisa {
             }
         }
     }
+    
+    public void gestioneostacolimobili(){
+        y4pos += 75;
+        y5pos += 75;
+        if (y4pos > 700) {
+            cxpos4++;
+            if (cxpos4 > 4) {
+                cxpos4 = 0;
+            }
+            cxpos4 = util.RandomRange(0, 4);
+            cypos4 = util.RandomRange(0, 4);
+            y4pos = carypos[cypos4];
 
-    public void gameover() {
+        }
+        if (y5pos > 700) {
+            cxpos5++;
+            if (cxpos5 > 4) {
+                cxpos5 = 0;
+            }
+
+            cxpos5 = util.RandomRange(0, 4);
+            cypos5 = util.RandomRange(0, 4);
+            y5pos = carypos[cypos5];
+
+        }
+        
+        if (cxpos4 == cxpos5 && cypos4 > -100 && cypos5 > -100) {
+
+            cxpos4 -= 1;
+            if (cxpos4 < 0) {
+                cxpos4 += 2;
+            }
+        }
+        
+         if (cxpos4 < 2 && cxpos5 < 2) {
+            if (cxpos4 == 0 && cxpos5 == 0) {
+                cxpos4++;
+            } else if (cxpos4 == 0 && cxpos5 == 1) {
+                cxpos4++;
+                cxpos5++;
+            }
+         }
+    }
+
+    public void gameover1() {
         if (y1pos < ypos && y1pos + 175 > ypos && carxpos[cxpos1] == xpos) {
             gameover = true;
             tfine = new Date().getTime();
@@ -360,6 +433,29 @@ public class condivisa {
             timer = tfine - tinizio;
         }
 
+    }
+    
+    public void gameover2(){
+        if (y4pos < ypos && y4pos + 175 > ypos && carxpos[cxpos4] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        if (y5pos < ypos && y5pos + 175 > ypos && carxpos[cxpos5] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        if (ypos < y4pos && ypos + 175 > y4pos && carxpos[cxpos4] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
+        if (ypos < y5pos && ypos + 175 > y5pos && carxpos[cxpos5] == xpos) {
+            gameover = true;
+            tfine = new Date().getTime();
+            timer = tfine - tinizio;
+        }
     }
 
     public void gestionedelay() {
