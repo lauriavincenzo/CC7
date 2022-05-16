@@ -137,11 +137,16 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
             g.setFont(new Font("Arial",Font.BOLD,20));
         }else if(c.getScore()>100)
         {
+            c.gestioneostacolifissi();
+            //GAMEOVER
+            c.gameover1();
+        }else{
             car4 = new ImageIcon("./assets/gamecar5.png");
             car5 = new ImageIcon("./assets/gamecar6.png");
             car4.paintIcon(this, g, c.getCarxpos()[c.getCxpos4()], c.getY4pos());
             car5.paintIcon(this, g, c.getCarxpos()[c.getCxpos5()], c.getY5pos());
             //c.gestioneostacolimobili();
+            c.gestioneostacolimobili();
             //GAMEOVER
             c.gameover2();
         }

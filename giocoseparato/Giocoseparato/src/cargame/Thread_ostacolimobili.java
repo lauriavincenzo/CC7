@@ -38,3 +38,4 @@ public class Thread_ostacolimobili extends Thread{
         }
        
    }
+       
