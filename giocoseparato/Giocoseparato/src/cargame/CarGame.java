@@ -32,8 +32,8 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
     
     private ImageIcon car;
     private long timer;
-    private int num1 = 400, num2 = 0, num3 = 0;
-    private ImageIcon car1, car2, car3;
+    private int num1 = 400;
+    private ImageIcon car1, car2, car3, car4, car5;
     private ImageIcon tree1, tree2, tree3;
     private boolean rightrotate = false, paint = false;
     Alberi a1,a2,a3,a4,a5,a6;
@@ -109,17 +109,30 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
         c.decrementoy();
         c.controlloy();
 
-        // GESTIONE OSTACOLI FISSI DA 158 A 276
-        car1 = new ImageIcon("./assets/gamecar2.png");
-        car2 = new ImageIcon("./assets/gamecar3.png");
-        car3 = new ImageIcon("./assets/gamecar4.png");
-        car1.paintIcon(this, g, c.getCarxpos()[c.getCxpos1()], c.getY1pos());
-        car2.paintIcon(this, g, c.getCarxpos()[c.getCxpos2()], c.getY2pos());
-        car3.paintIcon(this, g, c.getCarxpos()[c.getCxpos3()], c.getY3pos());
-        c.gestioneostacolifissi();
+        // GESTIONE OSTACOLI FISSI
+        if(c.getScore()<50)
+        {
+            car1 = new ImageIcon("./assets/gamecar2.png");
+            car2 = new ImageIcon("./assets/gamecar3.png");
+            car3 = new ImageIcon("./assets/gamecar4.png");
+            car1.paintIcon(this, g, c.getCarxpos()[c.getCxpos1()], c.getY1pos());
+            car2.paintIcon(this, g, c.getCarxpos()[c.getCxpos2()], c.getY2pos());
+            car3.paintIcon(this, g, c.getCarxpos()[c.getCxpos3()], c.getY3pos());
+            c.gestioneostacolifissi();
+            //GAMEOVER
+            c.gameover1();
+        }else{
+            car4 = new ImageIcon("./assets/gamecar5.png");
+            car5 = new ImageIcon("./assets/gamecar6.png");
+            car4.paintIcon(this, g, c.getCarxpos()[c.getCxpos4()], c.getY4pos());
+            car5.paintIcon(this, g, c.getCarxpos()[c.getCxpos5()], c.getY5pos());
+            c.gestioneostacolimobili();
+            //GAMEOVER
+            c.gameover2();
+        }
         
-        //GAMEOVER
-        c.gameover();
+        
+        
         //PUNTEGGIO KM/H E TIMER
         g.setColor(Color.blue);
         g.fillRect(120, 35, 220, 50);
@@ -204,7 +217,7 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
             c.setTinizio(new Date().getTime());
             c.setTfine(new Date().getTime());
             c.setScore(0);
-            c.setSpeed(50);
+            c.setSpeed(70);
             c.setDelay(150);
             c.setXpos(300);
             c.setYpos(700);
@@ -222,19 +235,19 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
     @Override
     public void keyTyped(KeyEvent e) {
         // TODO Auto-generated method stub
-        if ((e.getKeyChar() == 'a'||e.getKeyChar() == 'A') && !c.isGameover()) {
+        if ((e.getKeyChar() == 'a'|| e.getKeyChar() == 'A') && !c.isGameover()) {
             if(c.getXpos()!=100){
                 c.setXpos(c.getXpos()-100);
             }
             
 
         }
-       if ((e.getKeyChar() == 'd'||e.getKeyChar() == 'D') && !c.isGameover()) {
+       if ((e.getKeyChar() == 'd'|| e.getKeyChar() == 'D') && !c.isGameover()) {
             if(c.getXpos()!=500){
                 c.setXpos(c.getXpos()+100);
             }
         }
-        if ((e.getKeyChar() == 'w'||e.getKeyChar() == 'W') && !c.isGameover()) {
+        if (((e.getKeyChar() == 'w'|| e.getKeyChar() == 'W') || (e.getKeyCode()== KeyEvent.VK_UP)) && !c.isGameover()) {
              if(c.getSpeed()<130)
              {
                  c.setSpeed(c.getSpeed()+5);
@@ -243,7 +256,7 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
              
             
         }
-        if ((e.getKeyChar() == 's'||e.getKeyChar() == 'S') && !c.isGameover()) {
+        if (((e.getKeyChar() == 's'|| e.getKeyChar() == 'S') || (e.getKeyCode()== KeyEvent.VK_DOWN)) && !c.isGameover()) {
             if(c.getSpeed()>50)
              {
                 c.setSpeed(c.getSpeed()-5);
