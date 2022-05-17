@@ -27,20 +27,19 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
-public class CarGame extends JFrame implements KeyListener, ActionListener {
+public class giocoseparato extends JFrame implements KeyListener, ActionListener {
 
     
     private ImageIcon car;
     private long timer;
-    private int num1 = 400;
-    private ImageIcon car1, car2, car3, car4, car5;
+    private int num1 = 400, num2 = 0, num3 = 0;
+    private ImageIcon car1, car2, car3,car4,car5;
     private ImageIcon tree1, tree2, tree3;
     private boolean rightrotate = false, paint = false;
-    Alberi a1,a2,a3,a4,a5,a6;
+    Alberi a1,a2,a3;
     condivisa c;
     Thread_Ostacolifissi o,o2;
-    Thread_ostacolimobili om1,om2;
-    public CarGame(String title) {
+    public giocoseparato(String title) {
         super(title);
         setBounds(300, 10, 700, 700);
         setVisible(true);
@@ -53,17 +52,9 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
         a1=new Alberi(this,c);
         a2=new Alberi(this,c);
         a3=new Alberi(this,c);
-        o=new Thread_Ostacolifissi(c);
-        o2=new Thread_Ostacolifissi(c);
-        om1=new Thread_ostacolimobili(c);
-        om2=new Thread_ostacolimobili(c);
         a1.start();
         a2.start();
         a3.start();
-        o.start();
-        o2.start();
-        om1.start();
-        om2.start();
         
         
 
@@ -115,44 +106,22 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
         c.decrementoy();
         c.controlloy();
 
-        // GESTIONE OSTACOLI FISSI
-        if(c.getScore()<50)
-        {
-            car1 = new ImageIcon("./assets/gamecar2.png");
-            car2 = new ImageIcon("./assets/gamecar3.png");
-            car3 = new ImageIcon("./assets/gamecar4.png");
-            car1.paintIcon(this, g, c.getCarxpos()[c.getCxpos1()], c.getY1pos());
-            car2.paintIcon(this, g, c.getCarxpos()[c.getCxpos2()], c.getY2pos());
-            car3.paintIcon(this, g, c.getCarxpos()[c.getCxpos3()], c.getY3pos());
-            //c.gestioneostacolifissi();
-            //GAMEOVER
-            c.gameover1();
-        }else if( c.getScore()>49 && c.getScore()<100 ){
-            g.setFont(new Font("Serif", Font.BOLD, 20));
-            g.setColor(Color.yellow);
-            g.drawString("ATTENZIONE AUTO IN ARRIVO DAL SENSO OPPOSTO", 60, 270);
-            g.setColor(Color.white);
-            g.setFont(new Font("Arial", Font.BOLD, 30));
-            c.setTimer(c.getTimer()/1000);
-            g.setFont(new Font("Arial",Font.BOLD,20));
-        }else if(c.getScore()>100)
-        {
-            c.gestioneostacolifissi();
-            //GAMEOVER
-            c.gameover1();
-        }else{
-            car4 = new ImageIcon("./assets/gamecar5.png");
-            car5 = new ImageIcon("./assets/gamecar6.png");
-            car4.paintIcon(this, g, c.getCarxpos()[c.getCxpos4()], c.getY4pos());
-            car5.paintIcon(this, g, c.getCarxpos()[c.getCxpos5()], c.getY5pos());
-            //c.gestioneostacolimobili();
-            c.gestioneostacolimobili();
-            //GAMEOVER
-            c.gameover2();
-        }
-        
-        
-        
+        // GESTIONE OSTACOLI FISSI DA 158 A 276
+        car1 = new ImageIcon("./assets/gamecar2.png");
+        car2 = new ImageIcon("./assets/gamecar3.png");
+//        car3 = new ImageIcon("./assets/gamecar4.png");
+        car4 = new ImageIcon("./assets/gamecar5.png");
+        car5 = new ImageIcon("./assets/gamecar6.png");
+        car1.paintIcon(this, g, c.getCarxpos()[c.getCxpos1()], c.getY1pos());
+        car2.paintIcon(this, g, c.getCarxpos()[c.getCxpos2()], c.getY2pos());
+//        car3.paintIcon(this, g, c.getCarxpos()[c.getCxpos3()], c.getY3pos());
+        car4.paintIcon(this, g, c.getCarxpos()[c.getCxpos4()], c.getY4pos());
+        car5.paintIcon(this, g, c.getCarxpos()[c.getCxpos5()], c.getY5pos());
+
+        c.gestioneostacolifissi();
+        c.gestioneostacolimobili();        
+        //GAMEOVER
+        c.gameover();
         //PUNTEGGIO KM/H E TIMER
         g.setColor(Color.blue);
         g.fillRect(120, 35, 220, 50);
@@ -203,7 +172,7 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
     }
 
     public static void main(String args[]) {
-        CarGame c = new CarGame("Car Game");
+        giocoseparato c = new giocoseparato("Car Game");
     }
 
     @Override
@@ -227,17 +196,23 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
             paint = false;
             c.setCxpos1(0);
             c.setCxpos2(2);
-            c.setCxpos3(4);
+//            c.setCxpos3(4);
+            c.setCxpos4(1);
+            c.setCxpos5(3);
             c.setCypos1(util.RandomRange(0, 4));
             c.setCypos2(util.RandomRange(0, 4));
-            c.setCypos3(util.RandomRange(0, 4));
+//            c.setCypos3(util.RandomRange(0, 4));
+            c.setCypos4(util.RandomRange(0, 4));
+            c.setCypos5(util.RandomRange(0, 4));
             c.setY1pos(c.getCarypos()[c.getCypos1()]);
             c.setY2pos(c.getCarypos()[c.getCypos2()]);
-            c.setY3pos(c.getCarypos()[c.getCypos3()]);
+//            c.setY3pos(c.getCarypos()[c.getCypos3()]);
+            c.setY4pos(c.getCarypos()[c.getCypos4()]);
+            c.setY5pos(c.getCarypos()[c.getCypos5()]);
             c.setTinizio(new Date().getTime());
             c.setTfine(new Date().getTime());
             c.setScore(0);
-            c.setSpeed(70);
+            c.setSpeed(50);
             c.setDelay(150);
             c.setXpos(300);
             c.setYpos(700);
@@ -255,19 +230,19 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
     @Override
     public void keyTyped(KeyEvent e) {
         // TODO Auto-generated method stub
-        if ((e.getKeyChar() == 'a'|| e.getKeyChar() == 'A') && !c.isGameover()) {
+        if ((e.getKeyChar() == 'a'||e.getKeyChar() == 'A') && !c.isGameover()) {
             if(c.getXpos()!=100){
                 c.setXpos(c.getXpos()-100);
             }
             
 
         }
-       if ((e.getKeyChar() == 'd'|| e.getKeyChar() == 'D') && !c.isGameover()) {
+       if ((e.getKeyChar() == 'd'||e.getKeyChar() == 'D') && !c.isGameover()) {
             if(c.getXpos()!=500){
                 c.setXpos(c.getXpos()+100);
             }
         }
-        if (((e.getKeyChar() == 'w'|| e.getKeyChar() == 'W') || (e.getKeyCode()== KeyEvent.VK_UP)) && !c.isGameover()) {
+        if ((e.getKeyChar() == 'w'||e.getKeyChar() == 'W') && !c.isGameover()) {
              if(c.getSpeed()<130)
              {
                  c.setSpeed(c.getSpeed()+5);
@@ -276,7 +251,7 @@ public class CarGame extends JFrame implements KeyListener, ActionListener {
              
             
         }
-        if (((e.getKeyChar() == 's'|| e.getKeyChar() == 'S') || (e.getKeyCode()== KeyEvent.VK_DOWN)) && !c.isGameover()) {
+        if ((e.getKeyChar() == 's'||e.getKeyChar() == 'S') && !c.isGameover()) {
             if(c.getSpeed()>50)
              {
                 c.setSpeed(c.getSpeed()-5);

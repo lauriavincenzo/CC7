@@ -22,12 +22,12 @@ public class Thread_Ostacolifissi extends Thread{
     public void run() {
         synchronized (this) {
         while(true){
-            int time = util.RandomRange(400,800);
+            
             System.out.println("ostacolofisso");
 //            c.incrementopos();
             c.gestioneostacolifissi();
             try {
-                sleep(time);
+                sleep(500);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Alberi.class.getName()).log(Level.SEVERE, null, ex);
             }

@@ -13,11 +13,11 @@ import java.util.logging.Logger;
  * @author sireci
  */
 public class Alberi extends Thread {
-      CarGame cg;
+      giocoseparato cg;
       condivisa c;
       
 
-    public Alberi(CarGame cg, condivisa c) {
+    public Alberi(giocoseparato cg, condivisa c) {
         this.cg = cg;
         this.c = c;
     }

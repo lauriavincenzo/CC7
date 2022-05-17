@@ -24,12 +24,12 @@ public class Thread_ostacolimobili extends Thread{
     public void run() {
         synchronized (this) {
             while(true){
-            int time = util.RandomRange(300,700);
+            
             System.out.println("ostacolellomonello");
 //            c.incrementopos();
             c.gestioneostacolimobili();
             try {
-                sleep(time);
+                sleep(1000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Alberi.class.getName()).log(Level.SEVERE, null, ex);
             }
