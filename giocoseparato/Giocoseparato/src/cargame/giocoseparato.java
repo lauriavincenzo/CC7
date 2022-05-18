@@ -11,6 +11,7 @@ package cargame;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -55,7 +56,6 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
         a1.start();
         a2.start();
         a3.start();
-        
         
 
     }
@@ -135,7 +135,7 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
 
         g.setColor(Color.white);
         g.setFont(new Font("Arial", Font.BOLD, 30));
-        g.drawString("Score : " + c.getScore(), 160, 70);
+        g.drawString("Score : " + c.getScore(), 140, 70);
         g.drawString(c.getSpeed() + " Km/h", 453, 70);
         //c.incrementoscore();
         //c.incrementospeed();
@@ -147,6 +147,11 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
         c.gestionedelay();
         //SCHERMATA DI GAME OVER
         if (c.isGameover()) {
+            ImageIcon talebano = new ImageIcon("./assets/esplosione.png");
+            Image tmp = talebano.getImage();
+            tmp = tmp.getScaledInstance(230, 270,  java.awt.Image.SCALE_SMOOTH);
+            talebano = new ImageIcon(tmp);
+            talebano.paintIcon(this, g, c.getXpos()-talebano.getIconWidth()/4, c.getYpos()-talebano.getIconHeight()/4);
             g.setColor(Color.gray);
             g.fillRect(120, 210, 460, 200);
             g.setColor(Color.DARK_GRAY);
@@ -229,10 +234,12 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
 
     @Override
     public void keyTyped(KeyEvent e) {
-        // TODO Auto-generated method stub
-        if ((e.getKeyChar() == 'a'||e.getKeyChar() == 'A') && !c.isGameover()) {
+        System.out.println(c.isGameover());
+        if (!c.isGameover()) {
+            if ((e.getKeyChar() == 'a'||e.getKeyChar() == 'A') && !c.isGameover()) {
             if(c.getXpos()!=100){
-                c.setXpos(c.getXpos()-100);
+               c.setXpos(c.getXpos()-100);
+                
             }
             
 
@@ -258,8 +265,12 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
                 c.setDelay(c.getDelay()+5);
              }
         }
-
         repaint();
+        }
+        // TODO Auto-generated method stub
+        
+
+        
 
     }
 

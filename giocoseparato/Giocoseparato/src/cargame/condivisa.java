@@ -5,6 +5,7 @@
  */
 package cargame;
 
+import java.awt.image.BufferedImage;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -336,11 +337,11 @@ public class condivisa {
             }
         }*/
         if (cxpos1 < 2 && cxpos2 < 2 /*&& cxpos3 < 2*/) {
-            if (cxpos1 == 0 && cxpos2 == 0 && cxpos3 == 1) {
-                cxpos3++;
+            if (cxpos1 == 0 && cxpos2 == 0 /*&&&& cxpos3 == 1*/) {
+//                cxpos3++;
                 cxpos2++;
             } else if (cxpos1 == 0 && cxpos2 == 1 /*&& cxpos3 == 0*/) {
-                cxpos3++;
+//                cxpos3++;
                 cxpos2++;
             } else if (cxpos1 == 1 && cxpos2 == 0 /*&& cxpos3 == 0*/) {
                 cxpos1++;
