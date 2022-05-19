@@ -12,12 +12,12 @@ import java.util.logging.Logger;
  *
  * @author sireci
  */
-public class Alberi extends Thread {
+public class Thread_alberi extends Thread {
       giocoseparato cg;
       condivisa c;
       
 
-    public Alberi(giocoseparato cg, condivisa c) {
+    public Thread_alberi(giocoseparato cg, condivisa c) {
         this.cg = cg;
         this.c = c;
     }
@@ -33,7 +33,7 @@ public class Alberi extends Thread {
             try {
                 sleep(time);
             } catch (InterruptedException ex) {
-                Logger.getLogger(Alberi.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Thread_alberi.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }

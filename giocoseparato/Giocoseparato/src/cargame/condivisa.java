@@ -18,13 +18,13 @@ public class condivisa {
     public int vett[];
     private int num1 = 400;
     private int movimentostrada;
-    private int xpos;
-    private int ypos;
+    private int xpos, xposinseg;
+    private int ypos, yposinseg;
     private int carxpos[];
     private int carypos[];
-    private int cxpos1, cxpos2, cxpos3,cxpos4,cxpos5;
-    private int cypos1, cypos2, cypos3,cypos4,cypos5;
-    private int y1pos, y2pos, y3pos,y4pos,y5pos;
+    private int cxpos1, cxpos2, cxpos3, cxpos4, cxpos5;
+    private int cypos1, cypos2, cypos3, cypos4, cypos5;
+    private int y1pos, y2pos, y3pos, y4pos, y5pos;
     private long timer;
     private long tinizio, tfine;
     private boolean gameover = false;
@@ -37,8 +37,10 @@ public class condivisa {
         vett = new int[]{400, -200, -500, 100, -300, 500};
         num1 = util.RandomRange(0, 499);
         movimentostrada = 0;
-        ypos = 400;
+        ypos = 600;
         xpos = 300;
+        xposinseg = xpos;
+        yposinseg = 900;
         carxpos = new int[]{100, 200, 300, 400, 500};
         carypos = new int[]{-240, -480, -720, -960, -1200};
         cxpos1 = 0;
@@ -57,8 +59,50 @@ public class condivisa {
         tinizio = new Date().getTime();
         speed = 50;
         score = 0;
-        delay=150;
+        delay = 150;
 
+    }
+
+    public void inseguitore() {
+        xposinseg = xpos;
+        if ((speed > 49 && speed < 70) || (score > 200 && score < 400)) {
+            yposinseg = 700;
+        } else if ((speed > 69 && speed < 90) || (score > 500 && score < 700)) {
+            yposinseg = 650;
+        } else if ((speed > 89 && speed < 110) || (score > 800 && score < 1000)) {
+            yposinseg = 600;
+        } else if ((speed > 109 && speed < 131) || (score > 1100 && score < 1300)) {
+            yposinseg = 550;
+        }
+
+    }
+
+    public void avanzamento() {
+        if ((speed > 49 && speed < 70) || (score > 200 && score < 400)) {
+            ypos = 500;
+        } else if ((speed > 69 && speed < 90) || (score > 500 && score < 700)) {
+            ypos = 450;
+        } else if ((speed > 89 && speed < 110) || (score > 800 && score < 1000)) {
+            ypos = 400;
+        } else if ((speed > 109 && speed < 131) || (score > 1100 && score < 1300)) {
+            ypos = 350;
+        }
+    }
+
+    public void setXposinseg(int xposinseg) {
+        this.xposinseg = xposinseg;
+    }
+
+    public void setYposinseg(int yposinseg) {
+        this.yposinseg = yposinseg;
+    }
+
+    public int getXposinseg() {
+        return xposinseg;
+    }
+
+    public int getYposinseg() {
+        return yposinseg;
     }
 
     public int getTree1ypos() {
@@ -168,13 +212,13 @@ public class condivisa {
     public int getY2pos() {
         return y2pos;
     }
-    public int getY3pos() {
-        return y3pos;
-    }
+
+
 
     public int getY4pos() {
         return y4pos;
     }
+
     public int getY5pos() {
         return y5pos;
     }
@@ -242,13 +286,13 @@ public class condivisa {
     public int getCxpos2() {
         return cxpos2;
     }
-    public int getCxpos3() {
-        return cxpos3;
-    }
+
+
 
     public int getCxpos4() {
         return cxpos4;
     }
+
     public int getCxpos5() {
         return cxpos5;
     }
@@ -260,19 +304,18 @@ public class condivisa {
     public int getCypos2() {
         return cypos2;
     }
-    public int getCypos3() {
-        return cypos3;
-    }
+
 
     public int getCypos4() {
         return cypos4;
     }
+
     public int getCypos5() {
         return cypos5;
     }
 
     public void decrementoy() {
-        ypos -=40;
+        ypos -= 40;
     }
 
     public void controlloy() {
@@ -284,7 +327,7 @@ public class condivisa {
     public void gestioneostacolifissi() {
         y1pos += 25;
         y2pos += 25;
-        y3pos += 25;
+        
         if (y1pos > 700) {
             cxpos1++;
             if (cxpos1 > 4) {
@@ -306,32 +349,21 @@ public class condivisa {
             y2pos = carypos[cypos2];
 
         }
-        if (y3pos > 700) {
-            cxpos3++;
-            if (cxpos3 > 4) {
-                cxpos3 = 0;
-            }
+        
 
-            cxpos3 = util.RandomRange(0, 4);
-            cypos3 = util.RandomRange(0, 4);
-            y3pos = carypos[cypos3];
 
-        }
-       
-        if (cxpos1 < 2 && cxpos2 < 2 && cxpos3 < 2) {
-            if (cxpos1 == 0 && cxpos2 == 0 && cxpos3 == 1) {
-                cxpos3++;
+        if (cxpos1 < 2 && cxpos2 < 2 ) {
+            if (cxpos1 == 0 && cxpos2 == 1) {
+                
                 cxpos2++;
-            } else if (cxpos1 == 0 && cxpos2 == 1 && cxpos3 == 0) {
-                cxpos3++;
-                cxpos2++;
-            } else if (cxpos1 == 1 && cxpos2 == 0 && cxpos3 == 0) {
+            } else if (cxpos1 == 1 && cxpos2 == 0) {
                 cxpos1++;
                 cxpos2++;
             }
         }
     }
-    public void gestioneostacolimobili(){
+
+    public void gestioneostacolimobili() {
         y4pos += 40;
         y5pos += 40;
         if (y4pos > 700) {
@@ -355,7 +387,7 @@ public class condivisa {
             y5pos = carypos[cypos5];
 
         }
-        
+
         if (cxpos4 == cxpos5 && cypos4 > -100 && cypos5 > -100) {
 
             cxpos4 -= 1;
@@ -363,19 +395,19 @@ public class condivisa {
                 cxpos4 += 2;
             }
         }
-        
-         if (cxpos4 < 2 && cxpos5 < 2) {
+
+        if (cxpos4 < 2 && cxpos5 < 2) {
             if (cxpos4 == 0 && cxpos5 == 0) {
                 cxpos4++;
             } else if (cxpos4 == 0 && cxpos5 == 1) {
                 cxpos4++;
                 cxpos5++;
             }
-         }
+        }
     }
 
     public void gameover() {
-        if ((y1pos < ypos && y1pos + 175 > ypos && carxpos[cxpos1] == xpos) || (y2pos < ypos && y2pos + 175 > ypos && carxpos[cxpos2] == xpos)|| (y3pos < ypos && y3pos + 175 > ypos && carxpos[cxpos3] == xpos) || (y4pos < ypos && y4pos + 175 > ypos && carxpos[cxpos4] == xpos) || (y5pos < ypos && y5pos + 175 > ypos && carxpos[cxpos5] == xpos) || (ypos < y1pos && ypos + 175 > y1pos && carxpos[cxpos1] == xpos) || (ypos < y2pos && ypos + 175 > y2pos && carxpos[cxpos2] == xpos) || (ypos < y4pos && ypos + 175 > y4pos && carxpos[cxpos4] == xpos) || (ypos < y5pos && ypos + 175 > y5pos && carxpos[cxpos5] == xpos)) {
+        if ((y1pos < ypos && y1pos + 175 > ypos && carxpos[cxpos1] == xpos) || (y2pos < ypos && y2pos + 175 > ypos && carxpos[cxpos2] == xpos) || (y4pos < ypos && y4pos + 175 > ypos && carxpos[cxpos4] == xpos) || (y5pos < ypos && y5pos + 175 > ypos && carxpos[cxpos5] == xpos) || (ypos < y1pos && ypos + 175 > y1pos && carxpos[cxpos1] == xpos) || (ypos < y2pos && ypos + 175 > y2pos && carxpos[cxpos2] == xpos) || (ypos < y4pos && ypos + 175 > y4pos && carxpos[cxpos4] == xpos) || (ypos < y5pos && ypos + 175 > y5pos && carxpos[cxpos5] == xpos)) {
 
             gameover = true;
             tfine = new Date().getTime();
@@ -383,18 +415,17 @@ public class condivisa {
 
         }
 
-
     }
 
     public void gestionedelay() {
-         try {
+        try {
 
             TimeUnit.MILLISECONDS.sleep(delay);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        if ((y1pos < ypos && y1pos + 175 > ypos && carxpos[cxpos1] == xpos) || (y2pos < ypos && y2pos + 175 > ypos && carxpos[cxpos2] == xpos)|| (y3pos < ypos && y3pos + 175 > ypos && carxpos[cxpos3] == xpos) || (y4pos < ypos && y4pos + 175 > ypos && carxpos[cxpos4] == xpos) || (y5pos < ypos && y5pos + 175 > ypos && carxpos[cxpos5] == xpos)) {
+        if ((y1pos < ypos && y1pos + 175 > ypos && carxpos[cxpos1] == xpos) || (y2pos < ypos && y2pos + 175 > ypos && carxpos[cxpos2] == xpos)  || (y4pos < ypos && y4pos + 175 > ypos && carxpos[cxpos4] == xpos) || (y5pos < ypos && y5pos + 175 > ypos && carxpos[cxpos5] == xpos)) {
             gameover = true;
             tfine = new Date().getTime();
             timer = tfine - tinizio;
@@ -417,16 +448,17 @@ public class condivisa {
     public void setCxpos2(int cxpos2) {
         this.cxpos2 = cxpos2;
     }
-    public void setCxpos3(int cxpos3) {
-        this.cxpos3 = cxpos3;
-    }
+
+   
 
     public void setCxpos4(int cxpos4) {
         this.cxpos4 = cxpos4;
     }
+
     public void setCxpos5(int cxpos5) {
         this.cxpos5 = cxpos5;
     }
+
     public void setCypos1(int cypos1) {
         this.cypos1 = cypos1;
     }
@@ -434,13 +466,13 @@ public class condivisa {
     public void setCypos2(int cypos2) {
         this.cypos2 = cypos2;
     }
-    public void setCypos3(int cypos3) {
-        this.cypos3 = cypos3;
-    }
+
+    
 
     public void setCypos4(int cypos4) {
         this.cypos4 = cypos4;
     }
+
     public void setCypos5(int cypos5) {
         this.cypos5 = cypos5;
     }
@@ -452,13 +484,13 @@ public class condivisa {
     public void setY2pos(int y2pos) {
         this.y2pos = y2pos;
     }
-    public void setY3pos(int y3pos) {
-        this.y3pos = y3pos;
-    }
+
+   
 
     public void setY4pos(int y4pos) {
         this.y4pos = y4pos;
     }
+
     public void setY5pos(int y5pos) {
         this.y5pos = y5pos;
     }
@@ -479,22 +511,13 @@ public class condivisa {
         this.delay = delay;
     }
 
-     public void gestionevelocita(){
+    public void gestionevelocita() {
         if (speed > 130) {
-            speed=130;
+            speed = 130;
         }
     }
-    public void gestionescore(){
-        if((speed>49)&&(speed<70)){
-            score+=0.5;
-        }else if((speed>69)&&(speed<90)){
-            score++;
-        }else if((speed>89)&&(speed<110)){
-            score++;
-            score+=0.5;
-        }else if((speed>109)&&(speed<131)){
-            score++;
-            score++;
-        }
+
+    public void gestionescore() {
+        score += 0.5;
     }
 }
