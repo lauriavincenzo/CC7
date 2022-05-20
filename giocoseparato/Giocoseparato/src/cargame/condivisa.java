@@ -56,7 +56,6 @@ public class condivisa {
         y3pos = carypos[cypos3];
         y4pos = carypos[cypos4];
         y5pos = carypos[cypos5];
-        tinizio = new Date().getTime();
         speed = 50;
         score = 0;
         delay = 150;

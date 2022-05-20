@@ -33,7 +33,7 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
     private ImageIcon car;
     private long timer;
     private int num1 = 400, num2 = 0, num3 = 0;
-    private ImageIcon car1, car2, car3, car4, car5,car6;
+    private ImageIcon car1, car2, car3, car4, car5, car6;
     private ImageIcon tree1, tree2, tree3;
     private boolean paint = false;
     Thread_alberi a1;
@@ -41,7 +41,7 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
     condivisa c;
     Thread_Ostacolifissi o, o2;
     Thread_ostacolimobili om1, om2;
-    Thread_score gs,gs2;
+    Thread_score gs, gs2;
     Thread_inseguitore i;
     int menu = 0;
 
@@ -62,25 +62,14 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
         o2 = new Thread_Ostacolifissi(c, this);
         om1 = new Thread_ostacolimobili(c, this);
         om2 = new Thread_ostacolimobili(c, this);
-        gs=new Thread_score(c,this);
-        gs2=new Thread_score(c,this);
-        i=new Thread_inseguitore(c,this);
-        
-        a1.start();
-        a2.start();
-        a3.start();
-        o.start();
-        o2.start();
-        om1.start();
-        om2.start();
-        gs.start();
-        gs2.start();
-        i.start();
+        gs = new Thread_score(c, this);
+        gs2 = new Thread_score(c, this);
+        i = new Thread_inseguitore(c, this);
 
         menu = 0;
 
     }
-    
+
     public void paint(Graphics g) {
         if (menu == 0) {
             g.setColor(Color.DARK_GRAY);
@@ -93,9 +82,9 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
             g.drawString("Premi:", 300, 350);
             g.setFont(new Font("Arial", Font.BOLD, 25));
             g.drawString("- Enter → per giocare.", 220, 390);
-            g.drawString("- Esc → per uscire.", 220, 420);     
+            g.drawString("- Esc → per uscire.", 220, 420);
             g.setFont(new Font("Arial", Font.BOLD, 20));
-            
+
             if (!paint) {
                 repaint();
                 paint = true;
@@ -105,7 +94,7 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
 
         } else {
             //disegno di asfalto, righe e marciapiede
-            
+
             g.setColor(Color.gray);
             g.fillRect(0, 0, 700, 700);
             g.setColor(Color.white);
@@ -228,30 +217,39 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
     @Override
     public void keyPressed(KeyEvent e) {
         // TODO Auto-generated method stub
-        if (e.getKeyCode() == KeyEvent.VK_ESCAPE ) {
+        if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
             System.exit(0);
         }
         if (e.getKeyCode() == KeyEvent.VK_ENTER && menu == 0) {
             c.setGameover(false);
             paint = true;
-            menu=1;
+            menu = 1;
+            a1.start();
+            a2.start();
+            a3.start();
+            o.start();
+            o2.start();
+            om1.start();
+            om2.start();
+            gs.start();
+            gs2.start();
+            i.start();
+            c.setTinizio(new Date().getTime());
         }
         if (e.getKeyCode() == KeyEvent.VK_LEFT && !c.isGameover()) {
-            if(menu==1)
-            {
-            c.setXpos(c.getXpos() - 100);
-            if (c.getXpos() < 100) {
-                c.setXpos(100);
-            }
+            if (menu == 1) {
+                c.setXpos(c.getXpos() - 100);
+                if (c.getXpos() < 100) {
+                    c.setXpos(100);
+                }
             }
         }
         if (e.getKeyCode() == KeyEvent.VK_RIGHT && !c.isGameover()) {
-            if(menu==1)
-            {
-            c.setXpos(c.getXpos() + 100);
-            if (c.getXpos() > 400) {
-                c.setXpos(400);
-            }
+            if (menu == 1) {
+                c.setXpos(c.getXpos() + 100);
+                if (c.getXpos() > 400) {
+                    c.setXpos(400);
+                }
             }
         }
 
@@ -260,17 +258,17 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
             paint = false;
             c.setCxpos1(0);
             c.setCxpos2(2);
-            
+
             c.setCxpos4(1);
             c.setCxpos5(3);
             c.setCypos1(util.RandomRange(0, 4));
             c.setCypos2(util.RandomRange(0, 4));
-            
+
             c.setCypos4(util.RandomRange(0, 4));
             c.setCypos5(util.RandomRange(0, 4));
             c.setY1pos(c.getCarypos()[c.getCypos1()]);
             c.setY2pos(c.getCarypos()[c.getCypos2()]);
-            
+
             c.setY4pos(c.getCarypos()[c.getCypos4()]);
             c.setY5pos(c.getCarypos()[c.getCypos5()]);
             c.setTinizio(new Date().getTime());
@@ -296,7 +294,7 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
     @Override
     public void keyTyped(KeyEvent e) {
         System.out.println(c.isGameover());
-        if (!c.isGameover() && menu==1) {
+        if (!c.isGameover() && menu == 1) {
             if ((e.getKeyChar() == 'a' || e.getKeyChar() == 'A') && !c.isGameover()) {
                 if (c.getXpos() != 100) {
                     c.setXpos(c.getXpos() - 100);
@@ -333,6 +331,7 @@ public class giocoseparato extends JFrame implements KeyListener, ActionListener
         // TODO Auto-generated method stub
 
     }
+
     public int getmenu() {
         return menu;
     }
