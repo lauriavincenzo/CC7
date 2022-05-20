@@ -11,18 +11,25 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author sireci_edoardo
+ * @author sireci
+ * @class Thread_ostacolimobili
+ * @brief thread per andare a gestire il movimento degli ostacoli mobili
+ * 
  */
 public class Thread_ostacolimobili extends Thread {
-
+    ///oggetti che servono a richiamare i metodi di condivisa e main
     condivisa c;
     giocoseparato gs;
-
+    ///costruttore parametrico per inizializzare gli oggetti passati
     public Thread_ostacolimobili(condivisa c, giocoseparato gs) {
         this.c = c;
         this.gs = gs;
     }
-
+    /**
+     * @name run
+     * @brief metodo che fa andare il thread all'infinito una volta partito, salvo altri controlli che servono a fermarlo
+     * 
+     */
     @Override
     public void run() {
         synchronized (this) {

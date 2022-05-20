@@ -12,31 +12,76 @@ import java.util.concurrent.TimeUnit;
 /**
  *
  * @author sireci_edoardo
+ * @class condivisa
+ * @brief classe principale, vengono dichiarate tutte le variabili, scritti
+ * tutti i metodi da implementare poi nel main e nei thread
+ *
  */
 public class condivisa {
 
+    /**
+     * @var vett è il vettore che contiene le posizioni degli alberi
+     */
     public int vett[];
+    /**
+     * @var movimentostrada è la variabile di controllo di movimento della
+     * strada
+     */
+    int movimentostrada;
+    /**
+     * @var num1 è il valore che potra andare random da 0 a 500 per stabilire la
+     * coordinata precisa di ogni albero
+     */
     private int num1 = 400;
-    private int movimentostrada;
+    /**
+     * @var xpos,ypos,xposinseg,yposinseg sono le coordinate di x e y di
+     * protagonistta e inseguitore
+     */
     private int xpos, xposinseg;
     private int ypos, yposinseg;
+    /**
+     * @var carxpos e carypos sono i vettori che conterranno tutte le posizioni
+     * che possono assumere gli ostacoli
+     */
     private int carxpos[];
     private int carypos[];
-    private int cxpos1, cxpos2, cxpos3, cxpos4, cxpos5;
-    private int cypos1, cypos2, cypos3, cypos4, cypos5;
-    private int y1pos, y2pos, y3pos, y4pos, y5pos;
+    /**
+     * @var cxpos1,cxpos2,cxpos4,cxpos5,cypos1,cypos2,cypos4,cypos5 sono le x di
+     * ogni ostacolo,mentre y1pos,y2pos,y4pos,y5pos sono le y di ogni ostacolo
+     */
+    private int cxpos1, cxpos2, cxpos4, cxpos5;
+    private int cypos1, cypos2, cypos4, cypos5;
+    private int y1pos, y2pos, y4pos, y5pos;
+    /**
+     * @var timer è la vvariabile che terra il conto della durata della partita
+     * ed è data dalla differenza tra tfine-tinizio
+     */
     private long timer;
     private long tinizio, tfine;
+    /**
+     * @var gameover è la variabile di controllo di gameover
+     */
     private boolean gameover = false;
+    /**
+     * @var delay è la variabile che gestisce la velocità di movimento del
+     * gioco, più essa è bassa più il gioco va veloce
+     */
     private int delay;
+    /**
+     * @var speed,score sono le variabili che terranno conto di velocità e
+     * puntegio della partita
+     */
     int speed;
     float score;
     giocoseparato g;
 
+    /**
+     * @brief costruttore, serve a inizializzare tutte le variabili che verranno
+     * utilizzate
+     */
     public condivisa() {
         vett = new int[]{400, -200, -500, 100, -300, 500};
         num1 = util.RandomRange(0, 499);
-        movimentostrada = 0;
         ypos = 600;
         xpos = 300;
         xposinseg = xpos;
@@ -45,23 +90,26 @@ public class condivisa {
         carypos = new int[]{-240, -480, -720, -960, -1200};
         cxpos1 = 0;
         cxpos2 = 2;
-        cxpos3 = 4;
         cxpos4 = 1;
         cxpos5 = 3;
         cypos1 = util.RandomRange(0, 4);
         cypos2 = util.RandomRange(0, 4);
-        cypos3 = util.RandomRange(0, 4);
         y1pos = carypos[cypos1];
         y2pos = carypos[cypos2];
-        y3pos = carypos[cypos3];
         y4pos = carypos[cypos4];
         y5pos = carypos[cypos5];
         speed = 50;
         score = 0;
         delay = 150;
+        movimentostrada = 0;
 
     }
 
+    /**
+     * @name inseguitore
+     * @brief metodo per andare a gestire il movimento dell'inseguitore. Questo
+     * metodo poi verrà utilizzato nel thread_inseguitore
+     */
     public void inseguitore() {
         xposinseg = xpos;
         if ((speed > 49 && speed < 70) || (score > 200 && score < 400)) {
@@ -76,6 +124,19 @@ public class condivisa {
 
     }
 
+    public int getMovimentostrada() {
+        return movimentostrada;
+    }
+
+    public void setMovimentostrada(int movimentostrada) {
+        this.movimentostrada = movimentostrada;
+    }
+
+    /**
+     * @name avanzamento
+     * @brief metodo per a gestire l'avanzamento della auto del protagonista ad
+     * aumentare della velocità
+     */
     public void avanzamento() {
         if ((speed > 49 && speed < 70) || (score > 200 && score < 400)) {
             ypos = 500;
@@ -152,6 +213,11 @@ public class condivisa {
         this.vett[5] = tree6ypos;
     }
 
+    /**
+     * @name riposizionamentoalberi
+     * @brief metodo per andare a gestire la collocazione degli alberi lungo il
+     * lato della strada. Metodo applicato nel suo thread
+     */
     public int riposizionamentoAlberi() {
 
         if (vett[0] > 700) {
@@ -186,6 +252,11 @@ public class condivisa {
         return -1;
     }
 
+    /**
+     * @name incrementopos
+     * @brief metodo che va a incrementare ogni tot le posizioni dei vari alberi
+     * in modo da farli scendere nello schermo
+     */
     public void incrementopos() {
         vett[0] += 50;
         vett[1] += 50;
@@ -196,14 +267,6 @@ public class condivisa {
 
     }
 
-    public int getMovimentostrada() {
-        return movimentostrada;
-    }
-
-    public void setMovimentostrada(int movimentostrada) {
-        this.movimentostrada = movimentostrada;
-    }
-
     public int getY1pos() {
         return y1pos;
     }
@@ -211,8 +274,6 @@ public class condivisa {
     public int getY2pos() {
         return y2pos;
     }
-
-
 
     public int getY4pos() {
         return y4pos;
@@ -286,8 +347,6 @@ public class condivisa {
         return cxpos2;
     }
 
-
-
     public int getCxpos4() {
         return cxpos4;
     }
@@ -304,7 +363,6 @@ public class condivisa {
         return cypos2;
     }
 
-
     public int getCypos4() {
         return cypos4;
     }
@@ -317,16 +375,26 @@ public class condivisa {
         ypos -= 40;
     }
 
+    /**
+     * @name controlloy
+     * @brief metodo controllo che la coordinata y del protagonista non scenda
+     * sotto il valore di 400
+     */
     public void controlloy() {
         if (ypos < 400) {
             ypos = 400;
         }
     }
 
+    /**
+     * @name gestioneostacolifissi
+     * @brief metodo per andare a gestire il collocamento degli ostacoli fissi
+     * lungo la strada. Metodo utilizzato nel thread_ostacolifissi
+     */
     public void gestioneostacolifissi() {
         y1pos += 25;
         y2pos += 25;
-        
+
         if (y1pos > 700) {
             cxpos1++;
             if (cxpos1 > 4) {
@@ -348,12 +416,10 @@ public class condivisa {
             y2pos = carypos[cypos2];
 
         }
-        
 
-
-        if (cxpos1 < 2 && cxpos2 < 2 ) {
+        if (cxpos1 < 2 && cxpos2 < 2) {
             if (cxpos1 == 0 && cxpos2 == 1) {
-                
+
                 cxpos2++;
             } else if (cxpos1 == 1 && cxpos2 == 0) {
                 cxpos1++;
@@ -362,6 +428,11 @@ public class condivisa {
         }
     }
 
+    /**
+     * @name gestioneostacolimobili
+     * @brief Metodo per andare gestire il movimento degli ostacoli
+     * mobili.Metodo che verrà poi utilizzato nel Thread_ostacolomobili
+     */
     public void gestioneostacolimobili() {
         y4pos += 40;
         y5pos += 40;
@@ -405,6 +476,10 @@ public class condivisa {
         }
     }
 
+    /**
+     * @name gameover
+     * @brief metodo per andare a controllare il gameover
+     */
     public void gameover() {
         if ((y1pos < ypos && y1pos + 175 > ypos && carxpos[cxpos1] == xpos) || (y2pos < ypos && y2pos + 175 > ypos && carxpos[cxpos2] == xpos) || (y4pos < ypos && y4pos + 175 > ypos && carxpos[cxpos4] == xpos) || (y5pos < ypos && y5pos + 175 > ypos && carxpos[cxpos5] == xpos) || (ypos < y1pos && ypos + 175 > y1pos && carxpos[cxpos1] == xpos) || (ypos < y2pos && ypos + 175 > y2pos && carxpos[cxpos2] == xpos) || (ypos < y4pos && ypos + 175 > y4pos && carxpos[cxpos4] == xpos) || (ypos < y5pos && ypos + 175 > y5pos && carxpos[cxpos5] == xpos)) {
 
@@ -416,6 +491,41 @@ public class condivisa {
 
     }
 
+    /**
+     * @name gestionecollisioniostacoli
+     * @brief metodo per gestire le collisioni tra gli ostacoli lungo la strada.
+     * Il metodo è tutto commentato perche funziona a meta. Invece che fermare
+     * il movimento dei veicoli una volta in collisione, il metodo aspetta che
+     * le macchine s sovrappongano completamentte prima di spostarla, per questo
+     * è tutto commentato
+     */
+    /* 
+    public void gestionecollisioniostacoli() {
+        if (y1pos< y2pos && y1pos+175> y2pos && carxpos[cxpos1] ==carxpos[cxpos2] ) {
+            y1pos=y2pos-175;
+        }
+        if (y1pos< y4pos && y1pos+175> y4pos && carxpos[cxpos1] ==carxpos[cxpos4] ) {
+            y1pos=y4pos-175;
+        }
+        if (y1pos< y5pos && y1pos +175> y5pos && carxpos[cxpos1] ==carxpos[cxpos5] ) {
+            y1pos=y5pos-175;
+        }
+        if (y2pos < y4pos && y2pos+175> y4pos && carxpos[cxpos2] ==carxpos[cxpos4] ) {
+            y2pos=y4pos-175;
+        }
+        if (y2pos< y5pos && y2pos+175> y5pos && carxpos[cxpos2] ==carxpos[cxpos5] ) {
+            y2pos=y5pos-175;
+        }
+        
+        if (y4pos< y5pos && y4pos+175 > y5pos && carxpos[cxpos4] == carxpos[cxpos5]) {
+            y4pos=y5pos-175;
+        }
+    }
+     */
+    /**
+     * @name gestionedelay
+     * @brief metodo per andare a gestire il valore del delay durante il gioco
+     */
     public void gestionedelay() {
         try {
 
@@ -424,7 +534,7 @@ public class condivisa {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        if ((y1pos < ypos && y1pos + 175 > ypos && carxpos[cxpos1] == xpos) || (y2pos < ypos && y2pos + 175 > ypos && carxpos[cxpos2] == xpos)  || (y4pos < ypos && y4pos + 175 > ypos && carxpos[cxpos4] == xpos) || (y5pos < ypos && y5pos + 175 > ypos && carxpos[cxpos5] == xpos)) {
+        if ((y1pos < ypos && y1pos + 175 > ypos && carxpos[cxpos1] == xpos) || (y2pos < ypos && y2pos + 175 > ypos && carxpos[cxpos2] == xpos) || (y4pos < ypos && y4pos + 175 > ypos && carxpos[cxpos4] == xpos) || (y5pos < ypos && y5pos + 175 > ypos && carxpos[cxpos5] == xpos)) {
             gameover = true;
             tfine = new Date().getTime();
             timer = tfine - tinizio;
@@ -448,8 +558,6 @@ public class condivisa {
         this.cxpos2 = cxpos2;
     }
 
-   
-
     public void setCxpos4(int cxpos4) {
         this.cxpos4 = cxpos4;
     }
@@ -466,8 +574,6 @@ public class condivisa {
         this.cypos2 = cypos2;
     }
 
-    
-
     public void setCypos4(int cypos4) {
         this.cypos4 = cypos4;
     }
@@ -483,8 +589,6 @@ public class condivisa {
     public void setY2pos(int y2pos) {
         this.y2pos = y2pos;
     }
-
-   
 
     public void setY4pos(int y4pos) {
         this.y4pos = y4pos;
@@ -510,12 +614,21 @@ public class condivisa {
         this.delay = delay;
     }
 
+    /**
+     * @name gestionevelocita
+     * @brief metodo che serve mettere un limite massimo alla velocità
+     */
     public void gestionevelocita() {
         if (speed > 130) {
             speed = 130;
         }
     }
 
+    /**
+     * @name gestionescore
+     * @brief metodo che serve a incrementare lo score. Viene utilizzato nel
+     * Thread_score
+     */
     public void gestionescore() {
         score += 0.5;
     }

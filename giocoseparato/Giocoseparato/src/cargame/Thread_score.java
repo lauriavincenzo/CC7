@@ -10,17 +10,25 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author sireci_edoardo
+ * @author sireci
+ * @class Thread_score
+ * @brief thread per gestire l'incremento del punteggio durante la partita
+ * 
  */
 public class Thread_score extends Thread{
+    ///oggetti che servono a richiamare i metodi di condivisa e main
     condivisa c;
     giocoseparato gs;
-
+    ///costruttore parametrico per inizializzare gli oggetti passati
     public Thread_score(condivisa c, giocoseparato gs) {
         this.c = c;
         this.gs = gs;
     }
-
+    /**
+     * @name run
+     * @brief metodo che fa andare il thread all'infinito una volta partito, salvo altri controlli che servono a fermarlo
+     * 
+     */
     @Override
     public void run() {
         synchronized (this) {

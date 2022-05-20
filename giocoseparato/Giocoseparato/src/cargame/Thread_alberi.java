@@ -11,17 +11,25 @@ import java.util.logging.Logger;
 /**
  *
  * @author sireci
+ * @class Thread_alberi
+ * @brief thread per gestire la collocazione degli alberi lungo i lati della strada
+ * 
  */
 public class Thread_alberi extends Thread {
+    ///oggetti che servono a richiamare i metodi di condivisa e main
       giocoseparato cg;
       condivisa c;
       
-
+///costruttore parametrico per inizializzare gli oggetti passati
     public Thread_alberi(giocoseparato cg, condivisa c) {
         this.cg = cg;
         this.c = c;
     }
-
+    /**
+     * @name run
+     * @brief metodo che fa andare il thread all'infinito una volta partito, salvo altri controlli che servono a fermarlo
+     * 
+     */
     @Override
     public void run() {
         synchronized (this) {
