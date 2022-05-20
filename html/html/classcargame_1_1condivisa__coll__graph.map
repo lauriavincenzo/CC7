@@ -1,0 +1,8 @@
+<map id="condivisa" name="condivisa">
+<area shape="rect" id="node2" href="$classcargame_1_1giocoseparato.html" title="{giocoseparato\n|~ num2\l~ num3\l~ menu\l&#45; num1\l&#45; paint\l|+ giocoseparato()\l+ paint()\l+ keyPressed()\l+ keyReleased()\l+ keyTyped()\l+ actionPerformed()\l+ getmenu()\l+ main()\l* keyPressed()\l* keyReleased()\l* keyTyped()\l* actionPerformed()\l* getmenu()\l* main()\l}" alt="" coords="382,1949,518,2276"/>
+<area shape="rect" id="node6" href="$classcargame_1_1_thread___ostacolifissi.html" title="{Thread_Ostacolifissi\n||+ Thread_Ostacolifissi()\l+ run()\l* run()\l}" alt="" coords="609,2368,768,2475"/>
+<area shape="rect" id="node9" href="$classcargame_1_1_thread__inseguitore.html" title="thread per andare a gestire il movimento dell&#39;inseguitore " alt="" coords="417,2368,568,2475"/>
+<area shape="rect" id="node10" href="$classcargame_1_1_thread__ostacolimobili.html" title="thread per andare a gestire il movimento degli ostacoli mobili " alt="" coords="201,2368,368,2475"/>
+<area shape="rect" id="node11" href="$classcargame_1_1_thread__score.html" title="thread per gestire l&#39;incremento del punteggio durante la partita " alt="" coords="795,2368,915,2475"/>
+<area shape="rect" id="node12" href="$classcargame_1_1_thread__alberi.html" title="thread per gestire la collocazione degli alberi lungo i lati della strada " alt="" coords="972,2368,1091,2475"/>
+</map>

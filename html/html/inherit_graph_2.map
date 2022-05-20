@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$classcargame_1_1_thread__alberi.html" title="thread per gestire la collocazione degli alberi lungo i lati della strada " alt="" coords="139,5,237,32"/>
+<area shape="rect" id="node3" href="$classcargame_1_1_thread__inseguitore.html" title="thread per andare a gestire il movimento dell&#39;inseguitore " alt="" coords="123,56,253,83"/>
+<area shape="rect" id="node4" href="$classcargame_1_1_thread___ostacolifissi.html" title="Thread_Ostacolifissi" alt="" coords="119,107,257,133"/>
+<area shape="rect" id="node5" href="$classcargame_1_1_thread__ostacolimobili.html" title="thread per andare a gestire il movimento degli ostacoli mobili " alt="" coords="115,157,261,184"/>
+<area shape="rect" id="node6" href="$classcargame_1_1_thread__score.html" title="thread per gestire l&#39;incremento del punteggio durante la partita " alt="" coords="138,208,238,235"/>
+</map>

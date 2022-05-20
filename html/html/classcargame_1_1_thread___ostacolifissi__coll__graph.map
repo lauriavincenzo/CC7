@@ -1,0 +1,8 @@
+<map id="Thread_Ostacolifissi" name="Thread_Ostacolifissi">
+<area shape="rect" id="node3" href="$classcargame_1_1giocoseparato.html" title="{giocoseparato\n|~ num2\l~ num3\l~ menu\l&#45; num1\l&#45; paint\l|+ giocoseparato()\l+ paint()\l+ keyPressed()\l+ keyReleased()\l+ keyTyped()\l+ actionPerformed()\l+ getmenu()\l+ main()\l* main()\l* keyPressed()\l* keyReleased()\l* keyTyped()\l* actionPerformed()\l* getmenu()\l}" alt="" coords="435,448,571,775"/>
+<area shape="rect" id="node8" href="$classcargame_1_1_thread__inseguitore.html" title="thread per andare a gestire il movimento dell&#39;inseguitore " alt="" coords="257,2635,408,2741"/>
+<area shape="rect" id="node10" href="$classcargame_1_1_thread__ostacolimobili.html" title="thread per andare a gestire il movimento degli ostacoli mobili " alt="" coords="36,2635,203,2741"/>
+<area shape="rect" id="node11" href="$classcargame_1_1_thread__score.html" title="thread per gestire l&#39;incremento del punteggio durante la partita " alt="" coords="767,2635,887,2741"/>
+<area shape="rect" id="node12" href="$classcargame_1_1_thread__alberi.html" title="thread per gestire la collocazione degli alberi lungo i lati della strada " alt="" coords="600,2635,719,2741"/>
+<area shape="rect" id="node9" href="$classcargame_1_1condivisa.html" title="classe principale, vengono dichiarate tutte le variabili, scritti tutti i metodi da implementare poi ..." alt="" coords="415,837,589,2572"/>
+</map>

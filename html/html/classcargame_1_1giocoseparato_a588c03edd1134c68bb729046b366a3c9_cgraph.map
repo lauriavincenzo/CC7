@@ -1,0 +1,35 @@
+<map id="paint" name="paint">
+<area shape="rect" id="node2" href="$classcargame_1_1condivisa.html#ae81960e9152c97ef612f172f8ea2d68d" title="cargame.condivisa.getMovimentostrada" alt="" coords="104,5,353,32"/>
+<area shape="rect" id="node3" href="$classcargame_1_1condivisa.html#ac46fe43a46f5b9232c29e36c7e4a65d4" title="cargame.condivisa.setMovimentostrada" alt="" coords="104,56,353,83"/>
+<area shape="rect" id="node4" href="$classcargame_1_1condivisa.html#a356433543b0604c02ccbd5517dac4353" title="cargame.condivisa.getTree1ypos" alt="" coords="123,107,334,133"/>
+<area shape="rect" id="node5" href="$classcargame_1_1condivisa.html#a76c90994208b1d3e48135a8ab702bbac" title="cargame.condivisa.getTree2ypos" alt="" coords="123,157,334,184"/>
+<area shape="rect" id="node6" href="$classcargame_1_1condivisa.html#aca8c6ef62d607dc011069ec395602291" title="cargame.condivisa.getTree3ypos" alt="" coords="123,208,334,235"/>
+<area shape="rect" id="node7" href="$classcargame_1_1condivisa.html#a361cfa46d2af12ba2dd71c919c963b1a" title="cargame.condivisa.getTree4ypos" alt="" coords="123,259,334,285"/>
+<area shape="rect" id="node8" href="$classcargame_1_1condivisa.html#ab04fb0bbd43e196f4ce5f693ceeef61d" title="cargame.condivisa.getTree5ypos" alt="" coords="123,309,334,336"/>
+<area shape="rect" id="node9" href="$classcargame_1_1condivisa.html#ae5ed8de123a8342b0b263a6edce54e96" title="cargame.condivisa.getTree6ypos" alt="" coords="123,360,334,387"/>
+<area shape="rect" id="node10" href="$classcargame_1_1condivisa.html#a67792a3a709b780ba197a7a90146235f" title="cargame.condivisa.incrementopos" alt="" coords="119,411,338,437"/>
+<area shape="rect" id="node11" href="$classcargame_1_1condivisa.html#a3e38fd4d482650ff5fbb4ed8482de884" title="cargame.condivisa.getXpos" alt="" coords="139,461,318,488"/>
+<area shape="rect" id="node12" href="$classcargame_1_1condivisa.html#a07f761ace0143e14220c2905ceb2cb37" title="cargame.condivisa.getYpos" alt="" coords="138,512,319,539"/>
+<area shape="rect" id="node13" href="$classcargame_1_1condivisa.html#ad92dcd19309e0721961bc42f9ed605ed" title="cargame.condivisa.decrementoy" alt="" coords="125,563,333,589"/>
+<area shape="rect" id="node14" href="$classcargame_1_1condivisa.html#ae9e74ddcbb1dc6bf32f46cb712222303" title="cargame.condivisa.controlloy" alt="" coords="134,613,323,640"/>
+<area shape="rect" id="node15" href="$classcargame_1_1condivisa.html#a1a0fa95c76119cc26dfcbba5c30066fa" title="cargame.condivisa.getCarxpos" alt="" coords="129,664,328,691"/>
+<area shape="rect" id="node16" href="$classcargame_1_1condivisa.html#a27fca0bd2f18175eab0edbca75a34788" title="cargame.condivisa.getCxpos1" alt="" coords="131,715,326,741"/>
+<area shape="rect" id="node17" href="$classcargame_1_1condivisa.html#a49e433a78f65839d0938617b9572e453" title="cargame.condivisa.getY1pos" alt="" coords="135,765,323,792"/>
+<area shape="rect" id="node18" href="$classcargame_1_1condivisa.html#a6344ddec07fd3cb38fd06dea41f8889b" title="cargame.condivisa.getCxpos2" alt="" coords="131,816,326,843"/>
+<area shape="rect" id="node19" href="$classcargame_1_1condivisa.html#a70ced89b8879d050051033efae073c12" title="cargame.condivisa.getY2pos" alt="" coords="135,867,323,893"/>
+<area shape="rect" id="node20" href="$classcargame_1_1condivisa.html#a4043cc22dca0beb331b9092cd575990b" title="cargame.condivisa.getCxpos4" alt="" coords="131,917,326,944"/>
+<area shape="rect" id="node21" href="$classcargame_1_1condivisa.html#a8cf00057de784a7a6340baa7d77378db" title="cargame.condivisa.getY4pos" alt="" coords="135,968,323,995"/>
+<area shape="rect" id="node22" href="$classcargame_1_1condivisa.html#a771f05879a86ed8fc0da2333d872989e" title="cargame.condivisa.getCxpos5" alt="" coords="131,1019,326,1045"/>
+<area shape="rect" id="node23" href="$classcargame_1_1condivisa.html#aeb24cee3959c82e3fa622c2ceaf59cc9" title="cargame.condivisa.getY5pos" alt="" coords="135,1069,323,1096"/>
+<area shape="rect" id="node24" href="$classcargame_1_1condivisa.html#a97e507b46357fcce6770312f772fc347" title="cargame.condivisa.getXposinseg" alt="" coords="123,1120,334,1147"/>
+<area shape="rect" id="node25" href="$classcargame_1_1condivisa.html#a0db1c898200d64b881a2657712f72e40" title="cargame.condivisa.getYposinseg" alt="" coords="123,1171,335,1197"/>
+<area shape="rect" id="node26" href="$classcargame_1_1condivisa.html#a93b971884ca2e884143dbb35744cb6f0" title="cargame.condivisa.avanzamento" alt="" coords="124,1221,333,1248"/>
+<area shape="rect" id="node27" href="$classcargame_1_1condivisa.html#ae2d024d6283b37c1e717238ba1c36909" title="cargame.condivisa.getScore" alt="" coords="136,1272,321,1299"/>
+<area shape="rect" id="node28" href="$classcargame_1_1condivisa.html#ae2096b3878b5e714bf1d7b9d32389a5c" title="cargame.condivisa.getSpeed" alt="" coords="135,1323,323,1349"/>
+<area shape="rect" id="node29" href="$classcargame_1_1condivisa.html#abadc979a444724e04bdd60433875b774" title="cargame.condivisa.gestionevelocita" alt="" coords="116,1373,341,1400"/>
+<area shape="rect" id="node30" href="$classcargame_1_1condivisa.html#a93323c1d8c41c690167fd1b0cea697d5" title="cargame.condivisa.gestionedelay" alt="" coords="122,1424,335,1451"/>
+<area shape="rect" id="node31" href="$classcargame_1_1condivisa.html#ae61fc75224a904d7267bf6637a5afce2" title="cargame.condivisa.isGameover" alt="" coords="128,1475,329,1501"/>
+<area shape="rect" id="node33" href="$classcargame_1_1condivisa.html#ac28059108d8bb51d1f8e47bd4591c24b" title="cargame.condivisa.setTimer" alt="" coords="137,1525,320,1552"/>
+<area shape="rect" id="node34" href="$classcargame_1_1condivisa.html#a822b401425b70109c2537a534267e408" title="cargame.condivisa.getTimer" alt="" coords="137,1576,320,1603"/>
+<area shape="rect" id="node32" href="$classcargame_1_1condivisa.html#a66865cebbc04c361135576c98005b741" title="cargame.condivisa.gameover" alt="" coords="401,1475,589,1501"/>
+</map>

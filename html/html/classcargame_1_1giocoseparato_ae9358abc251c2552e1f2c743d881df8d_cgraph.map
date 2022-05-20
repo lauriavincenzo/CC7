@@ -1,0 +1,10 @@
+<map id="keyTyped" name="keyTyped">
+<area shape="rect" id="node2" href="$classcargame_1_1condivisa.html#ae61fc75224a904d7267bf6637a5afce2" title="cargame.condivisa.isGameover" alt="" coords="132,5,333,32"/>
+<area shape="rect" id="node4" href="$classcargame_1_1condivisa.html#a3e38fd4d482650ff5fbb4ed8482de884" title="cargame.condivisa.getXpos" alt="" coords="143,56,322,83"/>
+<area shape="rect" id="node5" href="$classcargame_1_1condivisa.html#a7dbd6bcc95ff7838423560d853e1ecec" title="cargame.condivisa.setXpos" alt="" coords="143,107,322,133"/>
+<area shape="rect" id="node6" href="$classcargame_1_1condivisa.html#ae2096b3878b5e714bf1d7b9d32389a5c" title="cargame.condivisa.getSpeed" alt="" coords="139,157,327,184"/>
+<area shape="rect" id="node7" href="$classcargame_1_1condivisa.html#a3b320d14ab676975894c44bd3ed68fbe" title="cargame.condivisa.setSpeed" alt="" coords="139,208,327,235"/>
+<area shape="rect" id="node8" href="$classcargame_1_1condivisa.html#a511f425b438de1dfc7952baa3422e055" title="cargame.condivisa.setDelay" alt="" coords="141,259,325,285"/>
+<area shape="rect" id="node9" href="$classcargame_1_1condivisa.html#ab3d3f2281e778ff0b69ac11dddd092b4" title="cargame.condivisa.getDelay" alt="" coords="141,309,325,336"/>
+<area shape="rect" id="node3" href="$classcargame_1_1condivisa.html#a66865cebbc04c361135576c98005b741" title="cargame.condivisa.gameover" alt="" coords="381,5,569,32"/>
+</map>

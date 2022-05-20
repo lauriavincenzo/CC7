@@ -1,0 +1,7 @@
+<map id="getSpeed" name="getSpeed">
+<area shape="rect" id="node2" href="$classcargame_1_1giocoseparato.html#a588c03edd1134c68bb729046b366a3c9" title="metodo per andare a disegnare i vari elementi grazie al supporto dei vari metodi nella condivisa ..." alt="" coords="147,5,337,32"/>
+<area shape="rect" id="node3" href="$classcargame_1_1giocoseparato.html#ae9358abc251c2552e1f2c743d881df8d" title="cargame.giocoseparato.key\lTyped" alt="" coords="151,57,333,98"/>
+<area shape="rect" id="node4" href="$classcargame_1_1_thread___ostacolifissi.html#a13a43e6d814de94978c515cb084873b1" title="cargame.Thread_Ostacolifissi.run" alt="" coords="135,123,349,149"/>
+<area shape="rect" id="node5" href="$classcargame_1_1_thread__ostacolimobili.html#a13a43e6d814de94978c515cb084873b1" title="cargame.Thread_ostacolimobili.run" alt="" coords="131,173,353,200"/>
+<area shape="rect" id="node6" href="$classcargame_1_1_thread__score.html#a13a43e6d814de94978c515cb084873b1" title="cargame.Thread_score.run" alt="" coords="154,224,330,251"/>
+</map>

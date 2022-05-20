@@ -1,0 +1,1700 @@
+\hypertarget{classcargame_1_1condivisa}{}\section{condivisa Class Reference}
+\label{classcargame_1_1condivisa}\index{condivisa@{condivisa}}
+
+
+classe principale, vengono dichiarate tutte le variabili, scritti tutti i metodi da implementare poi nel main e nei thread  
+
+
+
+
+Collaboration diagram for condivisa\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classcargame_1_1condivisa__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcargame_1_1condivisa_a96b9f2e5620278c04a6c027b23b67dc3}{condivisa} ()
+\begin{DoxyCompactList}\small\item\em costruttore, serve a inizializzare tutte le variabili che verranno utilizzate \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ inseguitore}\par
+{\em metodo per andare a gestire il movimento dell\textquotesingle{}inseguitore. Questo metodo poi verrà utilizzato nel thread\+\_\+inseguitore }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcargame_1_1condivisa_a54112d941742c218419e82d00f4d3490}{inseguitore} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_ae81960e9152c97ef612f172f8ea2d68d}{get\+Movimentostrada} ()
+\item 
+void \hyperlink{classcargame_1_1condivisa_ac46fe43a46f5b9232c29e36c7e4a65d4}{set\+Movimentostrada} (int movimentostrada)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ avanzamento}\par
+{\em metodo per a gestire l\textquotesingle{}avanzamento della auto del protagonista ad aumentare della velocità }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcargame_1_1condivisa_a93b971884ca2e884143dbb35744cb6f0}{avanzamento} ()
+\item 
+void \hyperlink{classcargame_1_1condivisa_a7fc9e9753bb8c6f8023ab94ef56744a6}{set\+Xposinseg} (int xposinseg)
+\item 
+void \hyperlink{classcargame_1_1condivisa_a4bc9cdd1344461ced99ee1bfc9049bea}{set\+Yposinseg} (int yposinseg)
+\item 
+int \hyperlink{classcargame_1_1condivisa_a97e507b46357fcce6770312f772fc347}{get\+Xposinseg} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a0db1c898200d64b881a2657712f72e40}{get\+Yposinseg} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a356433543b0604c02ccbd5517dac4353}{get\+Tree1ypos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a76c90994208b1d3e48135a8ab702bbac}{get\+Tree2ypos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_aca8c6ef62d607dc011069ec395602291}{get\+Tree3ypos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a361cfa46d2af12ba2dd71c919c963b1a}{get\+Tree4ypos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_ab04fb0bbd43e196f4ce5f693ceeef61d}{get\+Tree5ypos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_ae5ed8de123a8342b0b263a6edce54e96}{get\+Tree6ypos} ()
+\item 
+void \hyperlink{classcargame_1_1condivisa_a8ef6dcab42d241a285e397ac0734cf75}{set\+Tree1ypos} (int tree1ypos)
+\item 
+void \hyperlink{classcargame_1_1condivisa_a9c27a4ce9c3d7df4eb427e695f150c98}{set\+Tree2ypos} (int tree2ypos)
+\item 
+void \hyperlink{classcargame_1_1condivisa_ad44cf98ca5b583b9611c581ccd26874a}{set\+Tree3ypos} (int tree3ypos)
+\item 
+void \hyperlink{classcargame_1_1condivisa_a27a081c3460dfa87ba577e3f0c24ee06}{set\+Tree4ypos} (int tree4ypos)
+\item 
+void \hyperlink{classcargame_1_1condivisa_aae978adead4d57b9ce11294fe9f06803}{set\+Tree5ypos} (int tree5ypos)
+\item 
+void \hyperlink{classcargame_1_1condivisa_ad0b9d3bbd4a7b0852f8fb84aaa101697}{set\+Tree6ypos} (int tree6ypos)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ riposizionamentoalberi}\par
+{\em metodo per andare a gestire la collocazione degli alberi lungo il lato della strada. Metodo applicato nel suo thread }\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classcargame_1_1condivisa_ad8fe09dd7b1a7984263e49555b38e19d}{riposizionamento\+Alberi} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ incrementopos}\par
+{\em metodo che va a incrementare ogni tot le posizioni dei vari alberi in modo da farli scendere nello schermo }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcargame_1_1condivisa_a67792a3a709b780ba197a7a90146235f}{incrementopos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a49e433a78f65839d0938617b9572e453}{get\+Y1pos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a70ced89b8879d050051033efae073c12}{get\+Y2pos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a8cf00057de784a7a6340baa7d77378db}{get\+Y4pos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_aeb24cee3959c82e3fa622c2ceaf59cc9}{get\+Y5pos} ()
+\item 
+void \hyperlink{classcargame_1_1condivisa_a3b320d14ab676975894c44bd3ed68fbe}{set\+Speed} (int speed)
+\item 
+void \hyperlink{classcargame_1_1condivisa_ac28059108d8bb51d1f8e47bd4591c24b}{set\+Timer} (long \hyperlink{classcargame_1_1condivisa_a464494475fd50fe632c9e8bb3ffc63b3}{timer})
+\item 
+long \hyperlink{classcargame_1_1condivisa_a822b401425b70109c2537a534267e408}{get\+Timer} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_ab3d3f2281e778ff0b69ac11dddd092b4}{get\+Delay} ()
+\item 
+void \hyperlink{classcargame_1_1condivisa_aa6293371e2d8c3a2c7f9f512d738d53b}{set\+Score} (int score)
+\item 
+int \hyperlink{classcargame_1_1condivisa_ae2096b3878b5e714bf1d7b9d32389a5c}{get\+Speed} ()
+\item 
+boolean \hyperlink{classcargame_1_1condivisa_ae61fc75224a904d7267bf6637a5afce2}{is\+Gameover} ()
+\item 
+float \hyperlink{classcargame_1_1condivisa_ae2d024d6283b37c1e717238ba1c36909}{get\+Score} ()
+\item 
+void \hyperlink{classcargame_1_1condivisa_abe3e2d27707b3c79441cae6d9d59296f}{incrementoscore} ()
+\item 
+void \hyperlink{classcargame_1_1condivisa_afdb352ea73981b978cd227f30f58779c}{incrementospeed} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a3e38fd4d482650ff5fbb4ed8482de884}{get\+Xpos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a07f761ace0143e14220c2905ceb2cb37}{get\+Ypos} ()
+\item 
+int \mbox{[}$\,$\mbox{]} \hyperlink{classcargame_1_1condivisa_a1a0fa95c76119cc26dfcbba5c30066fa}{get\+Carxpos} ()
+\item 
+int \mbox{[}$\,$\mbox{]} \hyperlink{classcargame_1_1condivisa_a0a5a97aaafcb53566afc1767134f4bca}{get\+Carypos} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a27fca0bd2f18175eab0edbca75a34788}{get\+Cxpos1} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a6344ddec07fd3cb38fd06dea41f8889b}{get\+Cxpos2} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a4043cc22dca0beb331b9092cd575990b}{get\+Cxpos4} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a771f05879a86ed8fc0da2333d872989e}{get\+Cxpos5} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_ada67793f376b8b32838932eb4fde8873}{get\+Cypos1} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_ab355a204dacee68d747ca55a2a36905e}{get\+Cypos2} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a9dd958f70987f67ad2360cefe9266053}{get\+Cypos4} ()
+\item 
+int \hyperlink{classcargame_1_1condivisa_a882afa3a9ce3c5e27c4ab9621ae9c8d8}{get\+Cypos5} ()
+\item 
+void \hyperlink{classcargame_1_1condivisa_ad92dcd19309e0721961bc42f9ed605ed}{decrementoy} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ controlloy}\par
+{\em metodo controllo che la coordinata y del protagonista non scenda sotto il valore di 400 }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcargame_1_1condivisa_ae9e74ddcbb1dc6bf32f46cb712222303}{controlloy} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ gestioneostacolifissi}\par
+{\em metodo per andare a gestire il collocamento degli ostacoli fissi lungo la strada. Metodo utilizzato nel thread\+\_\+ostacolifissi }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcargame_1_1condivisa_aa89c1eb296290580066c78298dd31f69}{gestioneostacolifissi} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ gestioneostacolimobili}\par
+{\em Metodo per andare gestire il movimento degli ostacoli mobili.\+Metodo che verrà poi utilizzato nel Thread\+\_\+ostacolomobili }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcargame_1_1condivisa_a043c474a3bfdf39e53cb851da09ea68e}{gestioneostacolimobili} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ gameover}\par
+{\em metodo per andare a controllare il gameover }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcargame_1_1condivisa_a66865cebbc04c361135576c98005b741}{gameover} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ gestionedelay}\par
+{\em metodo per andare a gestire il valore del delay durante il gioco }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcargame_1_1condivisa_a93323c1d8c41c690167fd1b0cea697d5}{gestionedelay} ()
+\item 
+void \hyperlink{classcargame_1_1condivisa_a7dbd6bcc95ff7838423560d853e1ecec}{set\+Xpos} (int \hyperlink{classcargame_1_1condivisa_a4c8fb3f1c1ae597ee856290390ebc274}{xpos})
+\item 
+void \hyperlink{classcargame_1_1condivisa_aeb77b8817744feab241516cbf8a559b7}{set\+Ypos} (int \hyperlink{classcargame_1_1condivisa_a4db09a4236b6f591c377857b932eb41a}{ypos})
+\item 
+void \hyperlink{classcargame_1_1condivisa_a51e9c9ff9a30c46c20bcb013e5bc02f8}{set\+Cxpos1} (int \hyperlink{classcargame_1_1condivisa_ae2dabfc28e9264616512058bf59b8d7d}{cxpos1})
+\item 
+void \hyperlink{classcargame_1_1condivisa_ace31301facdef5d53bd698061a4805ff}{set\+Cxpos2} (int cxpos2)
+\item 
+void \hyperlink{classcargame_1_1condivisa_a63cb60098b1e4c023629879a0f46dd01}{set\+Cxpos4} (int cxpos4)
+\item 
+void \hyperlink{classcargame_1_1condivisa_aec4b4784ef518fa0e3b553c56ee34161}{set\+Cxpos5} (int cxpos5)
+\item 
+void \hyperlink{classcargame_1_1condivisa_a055bf748dacc07464a59c719b61403e4}{set\+Cypos1} (int \hyperlink{classcargame_1_1condivisa_a4493a5b3d22e1fa918e1aaaa5a858bdf}{cypos1})
+\item 
+void \hyperlink{classcargame_1_1condivisa_acdb37b1eabbd63bf181251992fddbcfe}{set\+Cypos2} (int cypos2)
+\item 
+void \hyperlink{classcargame_1_1condivisa_a33402e14739516b3f92c8aa29206b288}{set\+Cypos4} (int cypos4)
+\item 
+void \hyperlink{classcargame_1_1condivisa_ae1e077b4b6da22211fc4e93d5806a095}{set\+Cypos5} (int cypos5)
+\item 
+void \hyperlink{classcargame_1_1condivisa_aff8d76fefeea02298942a385888d8161}{set\+Y1pos} (int \hyperlink{classcargame_1_1condivisa_a48fa33e93e6fb92e83f1267b8c9b3b70}{y1pos})
+\item 
+void \hyperlink{classcargame_1_1condivisa_a596efa01b731811ef9e80909f32af69e}{set\+Y2pos} (int y2pos)
+\item 
+void \hyperlink{classcargame_1_1condivisa_a76b00ce7ba6b0f81a10fc9f4850a9233}{set\+Y4pos} (int y4pos)
+\item 
+void \hyperlink{classcargame_1_1condivisa_a3c187905ecd13a93abdacba7bf7b3176}{set\+Y5pos} (int y5pos)
+\item 
+void \hyperlink{classcargame_1_1condivisa_a062a34ec0119afcbcc5f60b70c27cef3}{set\+Tinizio} (long \hyperlink{classcargame_1_1condivisa_affe5d112c1c695c8d9225a4f5a98eede}{tinizio})
+\item 
+void \hyperlink{classcargame_1_1condivisa_a4a84cdccb50ce3a07a022dbca8b99fe3}{set\+Tfine} (long tfine)
+\item 
+void \hyperlink{classcargame_1_1condivisa_a69ebe98d89726ab5ee3c8bb7774d7541}{set\+Gameover} (boolean \hyperlink{classcargame_1_1condivisa_a5dabf0834c87a8496bdb1a69835a00f0}{gameover})
+\item 
+void \hyperlink{classcargame_1_1condivisa_a511f425b438de1dfc7952baa3422e055}{set\+Delay} (int \hyperlink{classcargame_1_1condivisa_a6f1be1f780ff54ec75b41451cd4d90bd}{delay})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ gestionevelocita}\par
+{\em metodo che serve mettere un limite massimo alla velocità }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcargame_1_1condivisa_abadc979a444724e04bdd60433875b774}{gestionevelocita} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ gestionescore}\par
+{\em metodo che serve a incrementare lo score. Viene utilizzato nel \hyperlink{classcargame_1_1_thread__score}{Thread\+\_\+score} }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcargame_1_1condivisa_aff555bd79e80391637df4bbe885ff837}{gestionescore} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classcargame_1_1condivisa_a746b9c4007f853292a93ea2262ec190f}{vett} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classcargame_1_1condivisa_ad023fa22fc14680886cc9bb170cbc099}{num1} = 400
+\item 
+int \hyperlink{classcargame_1_1condivisa_a4c8fb3f1c1ae597ee856290390ebc274}{xpos}
+\item 
+int \hyperlink{classcargame_1_1condivisa_a4db09a4236b6f591c377857b932eb41a}{ypos}
+\item 
+int \hyperlink{classcargame_1_1condivisa_aa67ca8c6cac33ea9d090d5826bcd6c68}{carxpos} \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{classcargame_1_1condivisa_a299cc3db0f1473b5cff99e2faf23ec3b}{carypos} \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{classcargame_1_1condivisa_ae2dabfc28e9264616512058bf59b8d7d}{cxpos1}
+\item 
+int \hyperlink{classcargame_1_1condivisa_a4493a5b3d22e1fa918e1aaaa5a858bdf}{cypos1}
+\item 
+int \hyperlink{classcargame_1_1condivisa_a48fa33e93e6fb92e83f1267b8c9b3b70}{y1pos}
+\item 
+long \hyperlink{classcargame_1_1condivisa_a464494475fd50fe632c9e8bb3ffc63b3}{timer}
+\item 
+long \hyperlink{classcargame_1_1condivisa_affe5d112c1c695c8d9225a4f5a98eede}{tinizio}
+\item 
+boolean \hyperlink{classcargame_1_1condivisa_a5dabf0834c87a8496bdb1a69835a00f0}{gameover} = false
+\item 
+int \hyperlink{classcargame_1_1condivisa_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+classe principale, vengono dichiarate tutte le variabili, scritti tutti i metodi da implementare poi nel main e nei thread 
+
+\begin{DoxyAuthor}{Author}
+sireci\+\_\+edoardo 
+\end{DoxyAuthor}
+
+
+Definition at line 20 of file condivisa.\+java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a96b9f2e5620278c04a6c027b23b67dc3}\label{classcargame_1_1condivisa_a96b9f2e5620278c04a6c027b23b67dc3}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!condivisa@{condivisa}}
+\index{condivisa@{condivisa}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{condivisa()}{condivisa()}}
+{\footnotesize\ttfamily \hyperlink{classcargame_1_1condivisa}{condivisa} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+costruttore, serve a inizializzare tutte le variabili che verranno utilizzate 
+
+
+
+Definition at line 82 of file condivisa.\+java.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a93b971884ca2e884143dbb35744cb6f0}\label{classcargame_1_1condivisa_a93b971884ca2e884143dbb35744cb6f0}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!avanzamento@{avanzamento}}
+\index{avanzamento@{avanzamento}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{avanzamento()}{avanzamento()}}
+{\footnotesize\ttfamily void avanzamento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classcargame_1_1condivisa_a93b971884ca2e884143dbb35744cb6f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ae9e74ddcbb1dc6bf32f46cb712222303}\label{classcargame_1_1condivisa_ae9e74ddcbb1dc6bf32f46cb712222303}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!controlloy@{controlloy}}
+\index{controlloy@{controlloy}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{controlloy()}{controlloy()}}
+{\footnotesize\ttfamily void controlloy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 383 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classcargame_1_1condivisa_ae9e74ddcbb1dc6bf32f46cb712222303_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ad92dcd19309e0721961bc42f9ed605ed}\label{classcargame_1_1condivisa_ad92dcd19309e0721961bc42f9ed605ed}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!decrementoy@{decrementoy}}
+\index{decrementoy@{decrementoy}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{decrementoy()}{decrementoy()}}
+{\footnotesize\ttfamily void decrementoy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 374 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classcargame_1_1condivisa_ad92dcd19309e0721961bc42f9ed605ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a66865cebbc04c361135576c98005b741}\label{classcargame_1_1condivisa_a66865cebbc04c361135576c98005b741}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!gameover@{gameover}}
+\index{gameover@{gameover}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{gameover()}{gameover()}}
+{\footnotesize\ttfamily void gameover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 483 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcargame_1_1condivisa_a66865cebbc04c361135576c98005b741_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a93323c1d8c41c690167fd1b0cea697d5}\label{classcargame_1_1condivisa_a93323c1d8c41c690167fd1b0cea697d5}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!gestionedelay@{gestionedelay}}
+\index{gestionedelay@{gestionedelay}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{gestionedelay()}{gestionedelay()}}
+{\footnotesize\ttfamily void gestionedelay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 529 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classcargame_1_1condivisa_a93323c1d8c41c690167fd1b0cea697d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_aa89c1eb296290580066c78298dd31f69}\label{classcargame_1_1condivisa_aa89c1eb296290580066c78298dd31f69}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!gestioneostacolifissi@{gestioneostacolifissi}}
+\index{gestioneostacolifissi@{gestioneostacolifissi}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{gestioneostacolifissi()}{gestioneostacolifissi()}}
+{\footnotesize\ttfamily void gestioneostacolifissi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 394 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcargame_1_1condivisa_aa89c1eb296290580066c78298dd31f69_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a043c474a3bfdf39e53cb851da09ea68e}\label{classcargame_1_1condivisa_a043c474a3bfdf39e53cb851da09ea68e}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!gestioneostacolimobili@{gestioneostacolimobili}}
+\index{gestioneostacolimobili@{gestioneostacolimobili}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{gestioneostacolimobili()}{gestioneostacolimobili()}}
+{\footnotesize\ttfamily void gestioneostacolimobili (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 436 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcargame_1_1condivisa_a043c474a3bfdf39e53cb851da09ea68e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_aff555bd79e80391637df4bbe885ff837}\label{classcargame_1_1condivisa_aff555bd79e80391637df4bbe885ff837}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!gestionescore@{gestionescore}}
+\index{gestionescore@{gestionescore}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{gestionescore()}{gestionescore()}}
+{\footnotesize\ttfamily void gestionescore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 632 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classcargame_1_1condivisa_aff555bd79e80391637df4bbe885ff837_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_abadc979a444724e04bdd60433875b774}\label{classcargame_1_1condivisa_abadc979a444724e04bdd60433875b774}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!gestionevelocita@{gestionevelocita}}
+\index{gestionevelocita@{gestionevelocita}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{gestionevelocita()}{gestionevelocita()}}
+{\footnotesize\ttfamily void gestionevelocita (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 621 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classcargame_1_1condivisa_abadc979a444724e04bdd60433875b774_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a1a0fa95c76119cc26dfcbba5c30066fa}\label{classcargame_1_1condivisa_a1a0fa95c76119cc26dfcbba5c30066fa}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Carxpos@{get\+Carxpos}}
+\index{get\+Carxpos@{get\+Carxpos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Carxpos()}{getCarxpos()}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} get\+Carxpos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 334 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classcargame_1_1condivisa_a1a0fa95c76119cc26dfcbba5c30066fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a0a5a97aaafcb53566afc1767134f4bca}\label{classcargame_1_1condivisa_a0a5a97aaafcb53566afc1767134f4bca}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Carypos@{get\+Carypos}}
+\index{get\+Carypos@{get\+Carypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Carypos()}{getCarypos()}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} get\+Carypos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 338 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classcargame_1_1condivisa_a0a5a97aaafcb53566afc1767134f4bca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a27fca0bd2f18175eab0edbca75a34788}\label{classcargame_1_1condivisa_a27fca0bd2f18175eab0edbca75a34788}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Cxpos1@{get\+Cxpos1}}
+\index{get\+Cxpos1@{get\+Cxpos1}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Cxpos1()}{getCxpos1()}}
+{\footnotesize\ttfamily int get\+Cxpos1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 342 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classcargame_1_1condivisa_a27fca0bd2f18175eab0edbca75a34788_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a6344ddec07fd3cb38fd06dea41f8889b}\label{classcargame_1_1condivisa_a6344ddec07fd3cb38fd06dea41f8889b}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Cxpos2@{get\+Cxpos2}}
+\index{get\+Cxpos2@{get\+Cxpos2}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Cxpos2()}{getCxpos2()}}
+{\footnotesize\ttfamily int get\+Cxpos2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 346 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classcargame_1_1condivisa_a6344ddec07fd3cb38fd06dea41f8889b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a4043cc22dca0beb331b9092cd575990b}\label{classcargame_1_1condivisa_a4043cc22dca0beb331b9092cd575990b}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Cxpos4@{get\+Cxpos4}}
+\index{get\+Cxpos4@{get\+Cxpos4}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Cxpos4()}{getCxpos4()}}
+{\footnotesize\ttfamily int get\+Cxpos4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 350 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classcargame_1_1condivisa_a4043cc22dca0beb331b9092cd575990b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a771f05879a86ed8fc0da2333d872989e}\label{classcargame_1_1condivisa_a771f05879a86ed8fc0da2333d872989e}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Cxpos5@{get\+Cxpos5}}
+\index{get\+Cxpos5@{get\+Cxpos5}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Cxpos5()}{getCxpos5()}}
+{\footnotesize\ttfamily int get\+Cxpos5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 354 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classcargame_1_1condivisa_a771f05879a86ed8fc0da2333d872989e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ada67793f376b8b32838932eb4fde8873}\label{classcargame_1_1condivisa_ada67793f376b8b32838932eb4fde8873}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Cypos1@{get\+Cypos1}}
+\index{get\+Cypos1@{get\+Cypos1}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Cypos1()}{getCypos1()}}
+{\footnotesize\ttfamily int get\+Cypos1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 358 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_ada67793f376b8b32838932eb4fde8873_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ab355a204dacee68d747ca55a2a36905e}\label{classcargame_1_1condivisa_ab355a204dacee68d747ca55a2a36905e}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Cypos2@{get\+Cypos2}}
+\index{get\+Cypos2@{get\+Cypos2}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Cypos2()}{getCypos2()}}
+{\footnotesize\ttfamily int get\+Cypos2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 362 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_ab355a204dacee68d747ca55a2a36905e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a9dd958f70987f67ad2360cefe9266053}\label{classcargame_1_1condivisa_a9dd958f70987f67ad2360cefe9266053}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Cypos4@{get\+Cypos4}}
+\index{get\+Cypos4@{get\+Cypos4}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Cypos4()}{getCypos4()}}
+{\footnotesize\ttfamily int get\+Cypos4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 366 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_a9dd958f70987f67ad2360cefe9266053_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a882afa3a9ce3c5e27c4ab9621ae9c8d8}\label{classcargame_1_1condivisa_a882afa3a9ce3c5e27c4ab9621ae9c8d8}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Cypos5@{get\+Cypos5}}
+\index{get\+Cypos5@{get\+Cypos5}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Cypos5()}{getCypos5()}}
+{\footnotesize\ttfamily int get\+Cypos5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 370 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_a882afa3a9ce3c5e27c4ab9621ae9c8d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ab3d3f2281e778ff0b69ac11dddd092b4}\label{classcargame_1_1condivisa_ab3d3f2281e778ff0b69ac11dddd092b4}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Delay@{get\+Delay}}
+\index{get\+Delay@{get\+Delay}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Delay()}{getDelay()}}
+{\footnotesize\ttfamily int get\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 298 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classcargame_1_1condivisa_ab3d3f2281e778ff0b69ac11dddd092b4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ae81960e9152c97ef612f172f8ea2d68d}\label{classcargame_1_1condivisa_ae81960e9152c97ef612f172f8ea2d68d}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Movimentostrada@{get\+Movimentostrada}}
+\index{get\+Movimentostrada@{get\+Movimentostrada}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Movimentostrada()}{getMovimentostrada()}}
+{\footnotesize\ttfamily int get\+Movimentostrada (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 127 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcargame_1_1condivisa_ae81960e9152c97ef612f172f8ea2d68d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ae2d024d6283b37c1e717238ba1c36909}\label{classcargame_1_1condivisa_ae2d024d6283b37c1e717238ba1c36909}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Score()}{getScore()}}
+{\footnotesize\ttfamily float get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 314 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classcargame_1_1condivisa_ae2d024d6283b37c1e717238ba1c36909_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ae2096b3878b5e714bf1d7b9d32389a5c}\label{classcargame_1_1condivisa_ae2096b3878b5e714bf1d7b9d32389a5c}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Speed@{get\+Speed}}
+\index{get\+Speed@{get\+Speed}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Speed()}{getSpeed()}}
+{\footnotesize\ttfamily int get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 306 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classcargame_1_1condivisa_ae2096b3878b5e714bf1d7b9d32389a5c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a822b401425b70109c2537a534267e408}\label{classcargame_1_1condivisa_a822b401425b70109c2537a534267e408}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Timer@{get\+Timer}}
+\index{get\+Timer@{get\+Timer}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Timer()}{getTimer()}}
+{\footnotesize\ttfamily long get\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 294 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classcargame_1_1condivisa_a822b401425b70109c2537a534267e408_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a356433543b0604c02ccbd5517dac4353}\label{classcargame_1_1condivisa_a356433543b0604c02ccbd5517dac4353}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Tree1ypos@{get\+Tree1ypos}}
+\index{get\+Tree1ypos@{get\+Tree1ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Tree1ypos()}{getTree1ypos()}}
+{\footnotesize\ttfamily int get\+Tree1ypos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 168 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classcargame_1_1condivisa_a356433543b0604c02ccbd5517dac4353_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a76c90994208b1d3e48135a8ab702bbac}\label{classcargame_1_1condivisa_a76c90994208b1d3e48135a8ab702bbac}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Tree2ypos@{get\+Tree2ypos}}
+\index{get\+Tree2ypos@{get\+Tree2ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Tree2ypos()}{getTree2ypos()}}
+{\footnotesize\ttfamily int get\+Tree2ypos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 172 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classcargame_1_1condivisa_a76c90994208b1d3e48135a8ab702bbac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_aca8c6ef62d607dc011069ec395602291}\label{classcargame_1_1condivisa_aca8c6ef62d607dc011069ec395602291}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Tree3ypos@{get\+Tree3ypos}}
+\index{get\+Tree3ypos@{get\+Tree3ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Tree3ypos()}{getTree3ypos()}}
+{\footnotesize\ttfamily int get\+Tree3ypos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 176 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classcargame_1_1condivisa_aca8c6ef62d607dc011069ec395602291_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a361cfa46d2af12ba2dd71c919c963b1a}\label{classcargame_1_1condivisa_a361cfa46d2af12ba2dd71c919c963b1a}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Tree4ypos@{get\+Tree4ypos}}
+\index{get\+Tree4ypos@{get\+Tree4ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Tree4ypos()}{getTree4ypos()}}
+{\footnotesize\ttfamily int get\+Tree4ypos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 180 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classcargame_1_1condivisa_a361cfa46d2af12ba2dd71c919c963b1a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ab04fb0bbd43e196f4ce5f693ceeef61d}\label{classcargame_1_1condivisa_ab04fb0bbd43e196f4ce5f693ceeef61d}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Tree5ypos@{get\+Tree5ypos}}
+\index{get\+Tree5ypos@{get\+Tree5ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Tree5ypos()}{getTree5ypos()}}
+{\footnotesize\ttfamily int get\+Tree5ypos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 184 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classcargame_1_1condivisa_ab04fb0bbd43e196f4ce5f693ceeef61d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ae5ed8de123a8342b0b263a6edce54e96}\label{classcargame_1_1condivisa_ae5ed8de123a8342b0b263a6edce54e96}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Tree6ypos@{get\+Tree6ypos}}
+\index{get\+Tree6ypos@{get\+Tree6ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Tree6ypos()}{getTree6ypos()}}
+{\footnotesize\ttfamily int get\+Tree6ypos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 188 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classcargame_1_1condivisa_ae5ed8de123a8342b0b263a6edce54e96_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a3e38fd4d482650ff5fbb4ed8482de884}\label{classcargame_1_1condivisa_a3e38fd4d482650ff5fbb4ed8482de884}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Xpos@{get\+Xpos}}
+\index{get\+Xpos@{get\+Xpos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Xpos()}{getXpos()}}
+{\footnotesize\ttfamily int get\+Xpos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 326 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classcargame_1_1condivisa_a3e38fd4d482650ff5fbb4ed8482de884_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a97e507b46357fcce6770312f772fc347}\label{classcargame_1_1condivisa_a97e507b46357fcce6770312f772fc347}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Xposinseg@{get\+Xposinseg}}
+\index{get\+Xposinseg@{get\+Xposinseg}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Xposinseg()}{getXposinseg()}}
+{\footnotesize\ttfamily int get\+Xposinseg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 160 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classcargame_1_1condivisa_a97e507b46357fcce6770312f772fc347_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a49e433a78f65839d0938617b9572e453}\label{classcargame_1_1condivisa_a49e433a78f65839d0938617b9572e453}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Y1pos@{get\+Y1pos}}
+\index{get\+Y1pos@{get\+Y1pos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Y1pos()}{getY1pos()}}
+{\footnotesize\ttfamily int get\+Y1pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 270 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_a49e433a78f65839d0938617b9572e453_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a70ced89b8879d050051033efae073c12}\label{classcargame_1_1condivisa_a70ced89b8879d050051033efae073c12}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Y2pos@{get\+Y2pos}}
+\index{get\+Y2pos@{get\+Y2pos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Y2pos()}{getY2pos()}}
+{\footnotesize\ttfamily int get\+Y2pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 274 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_a70ced89b8879d050051033efae073c12_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a8cf00057de784a7a6340baa7d77378db}\label{classcargame_1_1condivisa_a8cf00057de784a7a6340baa7d77378db}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Y4pos@{get\+Y4pos}}
+\index{get\+Y4pos@{get\+Y4pos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Y4pos()}{getY4pos()}}
+{\footnotesize\ttfamily int get\+Y4pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 278 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_a8cf00057de784a7a6340baa7d77378db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_aeb24cee3959c82e3fa622c2ceaf59cc9}\label{classcargame_1_1condivisa_aeb24cee3959c82e3fa622c2ceaf59cc9}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Y5pos@{get\+Y5pos}}
+\index{get\+Y5pos@{get\+Y5pos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Y5pos()}{getY5pos()}}
+{\footnotesize\ttfamily int get\+Y5pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 282 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_aeb24cee3959c82e3fa622c2ceaf59cc9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a07f761ace0143e14220c2905ceb2cb37}\label{classcargame_1_1condivisa_a07f761ace0143e14220c2905ceb2cb37}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Ypos@{get\+Ypos}}
+\index{get\+Ypos@{get\+Ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Ypos()}{getYpos()}}
+{\footnotesize\ttfamily int get\+Ypos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 330 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classcargame_1_1condivisa_a07f761ace0143e14220c2905ceb2cb37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a0db1c898200d64b881a2657712f72e40}\label{classcargame_1_1condivisa_a0db1c898200d64b881a2657712f72e40}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!get\+Yposinseg@{get\+Yposinseg}}
+\index{get\+Yposinseg@{get\+Yposinseg}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{get\+Yposinseg()}{getYposinseg()}}
+{\footnotesize\ttfamily int get\+Yposinseg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 164 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classcargame_1_1condivisa_a0db1c898200d64b881a2657712f72e40_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a67792a3a709b780ba197a7a90146235f}\label{classcargame_1_1condivisa_a67792a3a709b780ba197a7a90146235f}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!incrementopos@{incrementopos}}
+\index{incrementopos@{incrementopos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{incrementopos()}{incrementopos()}}
+{\footnotesize\ttfamily void incrementopos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 260 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classcargame_1_1condivisa_a67792a3a709b780ba197a7a90146235f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_abe3e2d27707b3c79441cae6d9d59296f}\label{classcargame_1_1condivisa_abe3e2d27707b3c79441cae6d9d59296f}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!incrementoscore@{incrementoscore}}
+\index{incrementoscore@{incrementoscore}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{incrementoscore()}{incrementoscore()}}
+{\footnotesize\ttfamily void incrementoscore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 318 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_afdb352ea73981b978cd227f30f58779c}\label{classcargame_1_1condivisa_afdb352ea73981b978cd227f30f58779c}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!incrementospeed@{incrementospeed}}
+\index{incrementospeed@{incrementospeed}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{incrementospeed()}{incrementospeed()}}
+{\footnotesize\ttfamily void incrementospeed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 322 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a54112d941742c218419e82d00f4d3490}\label{classcargame_1_1condivisa_a54112d941742c218419e82d00f4d3490}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!inseguitore@{inseguitore}}
+\index{inseguitore@{inseguitore}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{inseguitore()}{inseguitore()}}
+{\footnotesize\ttfamily void inseguitore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 113 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classcargame_1_1condivisa_a54112d941742c218419e82d00f4d3490_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ae61fc75224a904d7267bf6637a5afce2}\label{classcargame_1_1condivisa_ae61fc75224a904d7267bf6637a5afce2}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!is\+Gameover@{is\+Gameover}}
+\index{is\+Gameover@{is\+Gameover}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{is\+Gameover()}{isGameover()}}
+{\footnotesize\ttfamily boolean is\+Gameover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 310 of file condivisa.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classcargame_1_1condivisa_ae61fc75224a904d7267bf6637a5afce2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classcargame_1_1condivisa_ae61fc75224a904d7267bf6637a5afce2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ad8fe09dd7b1a7984263e49555b38e19d}\label{classcargame_1_1condivisa_ad8fe09dd7b1a7984263e49555b38e19d}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!riposizionamento\+Alberi@{riposizionamento\+Alberi}}
+\index{riposizionamento\+Alberi@{riposizionamento\+Alberi}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{riposizionamento\+Alberi()}{riposizionamentoAlberi()}}
+{\footnotesize\ttfamily int riposizionamento\+Alberi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 221 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcargame_1_1condivisa_ad8fe09dd7b1a7984263e49555b38e19d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a51e9c9ff9a30c46c20bcb013e5bc02f8}\label{classcargame_1_1condivisa_a51e9c9ff9a30c46c20bcb013e5bc02f8}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Cxpos1@{set\+Cxpos1}}
+\index{set\+Cxpos1@{set\+Cxpos1}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Cxpos1()}{setCxpos1()}}
+{\footnotesize\ttfamily void set\+Cxpos1 (\begin{DoxyParamCaption}\item[{int}]{cxpos1 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 553 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_a51e9c9ff9a30c46c20bcb013e5bc02f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ace31301facdef5d53bd698061a4805ff}\label{classcargame_1_1condivisa_ace31301facdef5d53bd698061a4805ff}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Cxpos2@{set\+Cxpos2}}
+\index{set\+Cxpos2@{set\+Cxpos2}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Cxpos2()}{setCxpos2()}}
+{\footnotesize\ttfamily void set\+Cxpos2 (\begin{DoxyParamCaption}\item[{int}]{cxpos2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 557 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_ace31301facdef5d53bd698061a4805ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a63cb60098b1e4c023629879a0f46dd01}\label{classcargame_1_1condivisa_a63cb60098b1e4c023629879a0f46dd01}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Cxpos4@{set\+Cxpos4}}
+\index{set\+Cxpos4@{set\+Cxpos4}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Cxpos4()}{setCxpos4()}}
+{\footnotesize\ttfamily void set\+Cxpos4 (\begin{DoxyParamCaption}\item[{int}]{cxpos4 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 561 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_a63cb60098b1e4c023629879a0f46dd01_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_aec4b4784ef518fa0e3b553c56ee34161}\label{classcargame_1_1condivisa_aec4b4784ef518fa0e3b553c56ee34161}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Cxpos5@{set\+Cxpos5}}
+\index{set\+Cxpos5@{set\+Cxpos5}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Cxpos5()}{setCxpos5()}}
+{\footnotesize\ttfamily void set\+Cxpos5 (\begin{DoxyParamCaption}\item[{int}]{cxpos5 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 565 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_aec4b4784ef518fa0e3b553c56ee34161_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a055bf748dacc07464a59c719b61403e4}\label{classcargame_1_1condivisa_a055bf748dacc07464a59c719b61403e4}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Cypos1@{set\+Cypos1}}
+\index{set\+Cypos1@{set\+Cypos1}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Cypos1()}{setCypos1()}}
+{\footnotesize\ttfamily void set\+Cypos1 (\begin{DoxyParamCaption}\item[{int}]{cypos1 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 569 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_a055bf748dacc07464a59c719b61403e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_acdb37b1eabbd63bf181251992fddbcfe}\label{classcargame_1_1condivisa_acdb37b1eabbd63bf181251992fddbcfe}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Cypos2@{set\+Cypos2}}
+\index{set\+Cypos2@{set\+Cypos2}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Cypos2()}{setCypos2()}}
+{\footnotesize\ttfamily void set\+Cypos2 (\begin{DoxyParamCaption}\item[{int}]{cypos2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 573 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_acdb37b1eabbd63bf181251992fddbcfe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a33402e14739516b3f92c8aa29206b288}\label{classcargame_1_1condivisa_a33402e14739516b3f92c8aa29206b288}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Cypos4@{set\+Cypos4}}
+\index{set\+Cypos4@{set\+Cypos4}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Cypos4()}{setCypos4()}}
+{\footnotesize\ttfamily void set\+Cypos4 (\begin{DoxyParamCaption}\item[{int}]{cypos4 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 577 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_a33402e14739516b3f92c8aa29206b288_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ae1e077b4b6da22211fc4e93d5806a095}\label{classcargame_1_1condivisa_ae1e077b4b6da22211fc4e93d5806a095}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Cypos5@{set\+Cypos5}}
+\index{set\+Cypos5@{set\+Cypos5}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Cypos5()}{setCypos5()}}
+{\footnotesize\ttfamily void set\+Cypos5 (\begin{DoxyParamCaption}\item[{int}]{cypos5 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 581 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classcargame_1_1condivisa_ae1e077b4b6da22211fc4e93d5806a095_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a511f425b438de1dfc7952baa3422e055}\label{classcargame_1_1condivisa_a511f425b438de1dfc7952baa3422e055}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Delay@{set\+Delay}}
+\index{set\+Delay@{set\+Delay}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Delay()}{setDelay()}}
+{\footnotesize\ttfamily void set\+Delay (\begin{DoxyParamCaption}\item[{int}]{delay }\end{DoxyParamCaption})}
+
+
+
+Definition at line 613 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classcargame_1_1condivisa_a511f425b438de1dfc7952baa3422e055_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a69ebe98d89726ab5ee3c8bb7774d7541}\label{classcargame_1_1condivisa_a69ebe98d89726ab5ee3c8bb7774d7541}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Gameover@{set\+Gameover}}
+\index{set\+Gameover@{set\+Gameover}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Gameover()}{setGameover()}}
+{\footnotesize\ttfamily void set\+Gameover (\begin{DoxyParamCaption}\item[{boolean}]{gameover }\end{DoxyParamCaption})}
+
+
+
+Definition at line 609 of file condivisa.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classcargame_1_1condivisa_a69ebe98d89726ab5ee3c8bb7774d7541_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classcargame_1_1condivisa_a69ebe98d89726ab5ee3c8bb7774d7541_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ac46fe43a46f5b9232c29e36c7e4a65d4}\label{classcargame_1_1condivisa_ac46fe43a46f5b9232c29e36c7e4a65d4}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Movimentostrada@{set\+Movimentostrada}}
+\index{set\+Movimentostrada@{set\+Movimentostrada}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Movimentostrada()}{setMovimentostrada()}}
+{\footnotesize\ttfamily void set\+Movimentostrada (\begin{DoxyParamCaption}\item[{int}]{movimentostrada }\end{DoxyParamCaption})}
+
+
+
+Definition at line 131 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcargame_1_1condivisa_ac46fe43a46f5b9232c29e36c7e4a65d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_aa6293371e2d8c3a2c7f9f512d738d53b}\label{classcargame_1_1condivisa_aa6293371e2d8c3a2c7f9f512d738d53b}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Score@{set\+Score}}
+\index{set\+Score@{set\+Score}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Score()}{setScore()}}
+{\footnotesize\ttfamily void set\+Score (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+
+
+Definition at line 302 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classcargame_1_1condivisa_aa6293371e2d8c3a2c7f9f512d738d53b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a3b320d14ab676975894c44bd3ed68fbe}\label{classcargame_1_1condivisa_a3b320d14ab676975894c44bd3ed68fbe}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Speed@{set\+Speed}}
+\index{set\+Speed@{set\+Speed}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Speed()}{setSpeed()}}
+{\footnotesize\ttfamily void set\+Speed (\begin{DoxyParamCaption}\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 286 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classcargame_1_1condivisa_a3b320d14ab676975894c44bd3ed68fbe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a4a84cdccb50ce3a07a022dbca8b99fe3}\label{classcargame_1_1condivisa_a4a84cdccb50ce3a07a022dbca8b99fe3}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Tfine@{set\+Tfine}}
+\index{set\+Tfine@{set\+Tfine}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Tfine()}{setTfine()}}
+{\footnotesize\ttfamily void set\+Tfine (\begin{DoxyParamCaption}\item[{long}]{tfine }\end{DoxyParamCaption})}
+
+
+
+Definition at line 605 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classcargame_1_1condivisa_a4a84cdccb50ce3a07a022dbca8b99fe3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_ac28059108d8bb51d1f8e47bd4591c24b}\label{classcargame_1_1condivisa_ac28059108d8bb51d1f8e47bd4591c24b}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Timer@{set\+Timer}}
+\index{set\+Timer@{set\+Timer}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Timer()}{setTimer()}}
+{\footnotesize\ttfamily void set\+Timer (\begin{DoxyParamCaption}\item[{long}]{timer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 290 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classcargame_1_1condivisa_ac28059108d8bb51d1f8e47bd4591c24b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a062a34ec0119afcbcc5f60b70c27cef3}\label{classcargame_1_1condivisa_a062a34ec0119afcbcc5f60b70c27cef3}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Tinizio@{set\+Tinizio}}
+\index{set\+Tinizio@{set\+Tinizio}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Tinizio()}{setTinizio()}}
+{\footnotesize\ttfamily void set\+Tinizio (\begin{DoxyParamCaption}\item[{long}]{tinizio }\end{DoxyParamCaption})}
+
+
+
+Definition at line 601 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classcargame_1_1condivisa_a062a34ec0119afcbcc5f60b70c27cef3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a8ef6dcab42d241a285e397ac0734cf75}\label{classcargame_1_1condivisa_a8ef6dcab42d241a285e397ac0734cf75}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Tree1ypos@{set\+Tree1ypos}}
+\index{set\+Tree1ypos@{set\+Tree1ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Tree1ypos()}{setTree1ypos()}}
+{\footnotesize\ttfamily void set\+Tree1ypos (\begin{DoxyParamCaption}\item[{int}]{tree1ypos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 192 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a9c27a4ce9c3d7df4eb427e695f150c98}\label{classcargame_1_1condivisa_a9c27a4ce9c3d7df4eb427e695f150c98}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Tree2ypos@{set\+Tree2ypos}}
+\index{set\+Tree2ypos@{set\+Tree2ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Tree2ypos()}{setTree2ypos()}}
+{\footnotesize\ttfamily void set\+Tree2ypos (\begin{DoxyParamCaption}\item[{int}]{tree2ypos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 196 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_ad44cf98ca5b583b9611c581ccd26874a}\label{classcargame_1_1condivisa_ad44cf98ca5b583b9611c581ccd26874a}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Tree3ypos@{set\+Tree3ypos}}
+\index{set\+Tree3ypos@{set\+Tree3ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Tree3ypos()}{setTree3ypos()}}
+{\footnotesize\ttfamily void set\+Tree3ypos (\begin{DoxyParamCaption}\item[{int}]{tree3ypos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 200 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a27a081c3460dfa87ba577e3f0c24ee06}\label{classcargame_1_1condivisa_a27a081c3460dfa87ba577e3f0c24ee06}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Tree4ypos@{set\+Tree4ypos}}
+\index{set\+Tree4ypos@{set\+Tree4ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Tree4ypos()}{setTree4ypos()}}
+{\footnotesize\ttfamily void set\+Tree4ypos (\begin{DoxyParamCaption}\item[{int}]{tree4ypos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 204 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_aae978adead4d57b9ce11294fe9f06803}\label{classcargame_1_1condivisa_aae978adead4d57b9ce11294fe9f06803}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Tree5ypos@{set\+Tree5ypos}}
+\index{set\+Tree5ypos@{set\+Tree5ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Tree5ypos()}{setTree5ypos()}}
+{\footnotesize\ttfamily void set\+Tree5ypos (\begin{DoxyParamCaption}\item[{int}]{tree5ypos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 208 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_ad0b9d3bbd4a7b0852f8fb84aaa101697}\label{classcargame_1_1condivisa_ad0b9d3bbd4a7b0852f8fb84aaa101697}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Tree6ypos@{set\+Tree6ypos}}
+\index{set\+Tree6ypos@{set\+Tree6ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Tree6ypos()}{setTree6ypos()}}
+{\footnotesize\ttfamily void set\+Tree6ypos (\begin{DoxyParamCaption}\item[{int}]{tree6ypos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 212 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a7dbd6bcc95ff7838423560d853e1ecec}\label{classcargame_1_1condivisa_a7dbd6bcc95ff7838423560d853e1ecec}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Xpos@{set\+Xpos}}
+\index{set\+Xpos@{set\+Xpos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Xpos()}{setXpos()}}
+{\footnotesize\ttfamily void set\+Xpos (\begin{DoxyParamCaption}\item[{int}]{xpos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 545 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classcargame_1_1condivisa_a7dbd6bcc95ff7838423560d853e1ecec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a7fc9e9753bb8c6f8023ab94ef56744a6}\label{classcargame_1_1condivisa_a7fc9e9753bb8c6f8023ab94ef56744a6}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Xposinseg@{set\+Xposinseg}}
+\index{set\+Xposinseg@{set\+Xposinseg}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Xposinseg()}{setXposinseg()}}
+{\footnotesize\ttfamily void set\+Xposinseg (\begin{DoxyParamCaption}\item[{int}]{xposinseg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 152 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classcargame_1_1condivisa_a7fc9e9753bb8c6f8023ab94ef56744a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_aff8d76fefeea02298942a385888d8161}\label{classcargame_1_1condivisa_aff8d76fefeea02298942a385888d8161}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Y1pos@{set\+Y1pos}}
+\index{set\+Y1pos@{set\+Y1pos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Y1pos()}{setY1pos()}}
+{\footnotesize\ttfamily void set\+Y1pos (\begin{DoxyParamCaption}\item[{int}]{y1pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 585 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classcargame_1_1condivisa_aff8d76fefeea02298942a385888d8161_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a596efa01b731811ef9e80909f32af69e}\label{classcargame_1_1condivisa_a596efa01b731811ef9e80909f32af69e}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Y2pos@{set\+Y2pos}}
+\index{set\+Y2pos@{set\+Y2pos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Y2pos()}{setY2pos()}}
+{\footnotesize\ttfamily void set\+Y2pos (\begin{DoxyParamCaption}\item[{int}]{y2pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 589 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classcargame_1_1condivisa_a596efa01b731811ef9e80909f32af69e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a76b00ce7ba6b0f81a10fc9f4850a9233}\label{classcargame_1_1condivisa_a76b00ce7ba6b0f81a10fc9f4850a9233}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Y4pos@{set\+Y4pos}}
+\index{set\+Y4pos@{set\+Y4pos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Y4pos()}{setY4pos()}}
+{\footnotesize\ttfamily void set\+Y4pos (\begin{DoxyParamCaption}\item[{int}]{y4pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 593 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classcargame_1_1condivisa_a76b00ce7ba6b0f81a10fc9f4850a9233_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a3c187905ecd13a93abdacba7bf7b3176}\label{classcargame_1_1condivisa_a3c187905ecd13a93abdacba7bf7b3176}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Y5pos@{set\+Y5pos}}
+\index{set\+Y5pos@{set\+Y5pos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Y5pos()}{setY5pos()}}
+{\footnotesize\ttfamily void set\+Y5pos (\begin{DoxyParamCaption}\item[{int}]{y5pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 597 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classcargame_1_1condivisa_a3c187905ecd13a93abdacba7bf7b3176_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_aeb77b8817744feab241516cbf8a559b7}\label{classcargame_1_1condivisa_aeb77b8817744feab241516cbf8a559b7}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Ypos@{set\+Ypos}}
+\index{set\+Ypos@{set\+Ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Ypos()}{setYpos()}}
+{\footnotesize\ttfamily void set\+Ypos (\begin{DoxyParamCaption}\item[{int}]{ypos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 549 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classcargame_1_1condivisa_aeb77b8817744feab241516cbf8a559b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcargame_1_1condivisa_a4bc9cdd1344461ced99ee1bfc9049bea}\label{classcargame_1_1condivisa_a4bc9cdd1344461ced99ee1bfc9049bea}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!set\+Yposinseg@{set\+Yposinseg}}
+\index{set\+Yposinseg@{set\+Yposinseg}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{set\+Yposinseg()}{setYposinseg()}}
+{\footnotesize\ttfamily void set\+Yposinseg (\begin{DoxyParamCaption}\item[{int}]{yposinseg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 156 of file condivisa.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classcargame_1_1condivisa_a4bc9cdd1344461ced99ee1bfc9049bea_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classcargame_1_1condivisa_aa67ca8c6cac33ea9d090d5826bcd6c68}\label{classcargame_1_1condivisa_aa67ca8c6cac33ea9d090d5826bcd6c68}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!carxpos@{carxpos}}
+\index{carxpos@{carxpos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{carxpos}{carxpos}}
+{\footnotesize\ttfamily int carxpos\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 46 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a299cc3db0f1473b5cff99e2faf23ec3b}\label{classcargame_1_1condivisa_a299cc3db0f1473b5cff99e2faf23ec3b}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!carypos@{carypos}}
+\index{carypos@{carypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{carypos}{carypos}}
+{\footnotesize\ttfamily int carypos\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 47 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_ae2dabfc28e9264616512058bf59b8d7d}\label{classcargame_1_1condivisa_ae2dabfc28e9264616512058bf59b8d7d}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!cxpos1@{cxpos1}}
+\index{cxpos1@{cxpos1}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{cxpos1}{cxpos1}}
+{\footnotesize\ttfamily int cxpos1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 52 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a4493a5b3d22e1fa918e1aaaa5a858bdf}\label{classcargame_1_1condivisa_a4493a5b3d22e1fa918e1aaaa5a858bdf}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!cypos1@{cypos1}}
+\index{cypos1@{cypos1}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{cypos1}{cypos1}}
+{\footnotesize\ttfamily int cypos1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 53 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a6f1be1f780ff54ec75b41451cd4d90bd}\label{classcargame_1_1condivisa_a6f1be1f780ff54ec75b41451cd4d90bd}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!delay@{delay}}
+\index{delay@{delay}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily int delay\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 69 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a5dabf0834c87a8496bdb1a69835a00f0}\label{classcargame_1_1condivisa_a5dabf0834c87a8496bdb1a69835a00f0}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!gameover@{gameover}}
+\index{gameover@{gameover}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{gameover}{gameover}}
+{\footnotesize\ttfamily gameover è la variabile di controllo di gameover = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 64 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_ad023fa22fc14680886cc9bb170cbc099}\label{classcargame_1_1condivisa_ad023fa22fc14680886cc9bb170cbc099}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!num1@{num1}}
+\index{num1@{num1}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{num1}{num1}}
+{\footnotesize\ttfamily int num1 = 400\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 35 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a464494475fd50fe632c9e8bb3ffc63b3}\label{classcargame_1_1condivisa_a464494475fd50fe632c9e8bb3ffc63b3}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!timer@{timer}}
+\index{timer@{timer}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily long timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 59 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_affe5d112c1c695c8d9225a4f5a98eede}\label{classcargame_1_1condivisa_affe5d112c1c695c8d9225a4f5a98eede}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!tinizio@{tinizio}}
+\index{tinizio@{tinizio}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{tinizio}{tinizio}}
+{\footnotesize\ttfamily long tinizio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 60 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a746b9c4007f853292a93ea2262ec190f}\label{classcargame_1_1condivisa_a746b9c4007f853292a93ea2262ec190f}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!vett@{vett}}
+\index{vett@{vett}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{vett}{vett}}
+{\footnotesize\ttfamily int vett\mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 25 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a4c8fb3f1c1ae597ee856290390ebc274}\label{classcargame_1_1condivisa_a4c8fb3f1c1ae597ee856290390ebc274}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!xpos@{xpos}}
+\index{xpos@{xpos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{xpos}{xpos}}
+{\footnotesize\ttfamily int xpos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 40 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a48fa33e93e6fb92e83f1267b8c9b3b70}\label{classcargame_1_1condivisa_a48fa33e93e6fb92e83f1267b8c9b3b70}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!y1pos@{y1pos}}
+\index{y1pos@{y1pos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{y1pos}{y1pos}}
+{\footnotesize\ttfamily int y1pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 54 of file condivisa.\+java.
+
+\mbox{\Hypertarget{classcargame_1_1condivisa_a4db09a4236b6f591c377857b932eb41a}\label{classcargame_1_1condivisa_a4db09a4236b6f591c377857b932eb41a}} 
+\index{cargame\+::condivisa@{cargame\+::condivisa}!ypos@{ypos}}
+\index{ypos@{ypos}!cargame\+::condivisa@{cargame\+::condivisa}}
+\subsubsection{\texorpdfstring{ypos}{ypos}}
+{\footnotesize\ttfamily int ypos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 41 of file condivisa.\+java.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+giocoseparato/\+Giocoseparato/src/cargame/\hyperlink{condivisa_8java}{condivisa.\+java}\end{DoxyCompactItemize}

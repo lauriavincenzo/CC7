@@ -1,0 +1,7 @@
+<map id="gameover" name="gameover">
+<area shape="rect" id="node2" href="$classcargame_1_1condivisa.html#ae61fc75224a904d7267bf6637a5afce2" title="isGameover" alt="" coords="135,68,225,95"/>
+<area shape="rect" id="node6" href="$classcargame_1_1condivisa.html#a69ebe98d89726ab5ee3c8bb7774d7541" title="setGameover" alt="" coords="131,123,229,149"/>
+<area shape="rect" id="node3" href="$classcargame_1_1giocoseparato.html#a588c03edd1134c68bb729046b366a3c9" title="metodo per andare a disegnare i vari elementi grazie al supporto dei vari metodi nella condivisa ..." alt="" coords="277,5,467,32"/>
+<area shape="rect" id="node4" href="$classcargame_1_1giocoseparato.html#aa12eb1084be2c4d9b03d5f248f00900d" title="cargame.giocoseparato.key\lPressed" alt="" coords="281,122,463,163"/>
+<area shape="rect" id="node5" href="$classcargame_1_1giocoseparato.html#ae9358abc251c2552e1f2c743d881df8d" title="cargame.giocoseparato.key\lTyped" alt="" coords="281,57,463,98"/>
+</map>
